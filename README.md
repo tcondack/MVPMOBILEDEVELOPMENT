@@ -13,7 +13,8 @@
 ## Aluno
 - TIAGO EVARISTO CONDACK	
 
-## Situação Escolhida: Circuito Terê Verde
+## Situação Escolhida 
+Circuito Terê Verde
 
 A geografia do território municipal de Teresópolis é caracterizada por terrenos montanhosos entremeados por vales. A área urbana encontra-se em um planalto a 869 metros acima do nível do mar e é delimitada por três unidades de conservação: o Parque Nacional da Serra dos Órgãos, o Parque Estadual dos Três Picos e o Parque Natural Municipal Montanhas de Teresópolis. A existência das unidades de conservação proporciona ao município o turismo ambiental, em especial de montanhismo, e também limitam o crescimento urbano.
 
