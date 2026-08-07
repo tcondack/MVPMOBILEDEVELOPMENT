@@ -40,7 +40,7 @@ Todos que possuem interesse no ecoturismo, desde moradores da cidade a turistas 
 - Administrador(a) do site, responsável pela inserção e exclusão de agendas, pela gestão de disponibilidade de parques e trilhas.
 - Usuários que terão acesso aos dados disponibilizados pela plataforma.
 
-
+## Protótipos
 
 ## Execução do Projeto
 
