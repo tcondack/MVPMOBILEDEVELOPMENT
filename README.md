@@ -9,6 +9,8 @@
 - [Os possíveis atores envolvidos](#os-possíveis-atores-envolvidos)
 - [Protótipos](#protótipos)
 - [Execução do projeto](#Execução-do-Projeto)
+- [REQUISITOS FUNCIONAIS](#requisitos-funcionais)
+- [REQUISITOS NÃO FUNCIONAIS](#requisitos-não-funcionais)
 
 ## Aluno
 - TIAGO EVARISTO CONDACK	
@@ -57,3 +59,21 @@ pip install -r requirements.txt
 rodar servidor
 
 python manage.py runserver
+
+
+## REQUISITOS FUNCIONAIS
+
+LOGIN ADMINISTRADORES
+DISPONIBILIDADE DE EVENTOS
+PÁGINA DE TRILHAS E EVENTOS
+
+
+
+## REQUISITOS NÃO FUNCIONAIS
+
+DESEMPENHO RÁPIDO
+PRIVACIDADE DE DADOS
+INTERFACE INTUIIVA
+SEGURANÇA DO SITE
+SEGURANÇA DOS DADOS DA PÁGINA
+FLUIDEZ DE NAVEGAÇÃO
