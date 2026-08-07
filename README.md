@@ -22,6 +22,27 @@ A geografia do território municipal de Teresópolis é caracterizada por terren
 
 Teresópolis é um destino turístico popular, atraindo visitantes em busca de belezas naturais e atividades ao ar livre, como trilhas e escaladas. A proposta do Circuito Terê Verde busca promover essas atrações, destacando a rica biodiversidade e as opções de ecoturismo disponíveis na região. A plataforma “Terê Verde Online” permitirá que os visitantes tenham acesso a informações atualizadas sobre a biodiversidade, trilhas, cachoeiras e eventos que ocorrem nesses espaços protegidos.
 
+ 	
+
+Possíveis Atores Envolvidos
+
+●   Visitantes: Usuários que buscam informações sobre a biodiversidade, trilhas e eventos.
+
+●   Administradores: Responsáveis por manter o site atualizado com informações relevantes.
+
+Exigências
+
+● Gestão de Disponibilidade: Os administradores devem ter uma área para configurar a disponibilidade e horários de funcionamento de eventos e temporadas, além de atualizações de novidades.
+
+● Desempenho Rápido: O sistema deve responder rapidamente para acomodar um grande número de usuários simultaneamente.
+
+● Interface Intuitiva: A interface do usuário deve ser amigável e de fácil utilização, permitindo navegação fluida.
+
+● Segurança de Dados: Garantir a segurança e privacidade dos dados pessoais dos administradores.
+
+● Login para Administradores: Um botão de login deve ser disponibilizado para que os administradores acessem áreas restritas do site.
+
+
 ## Tecnologias Utilizadas
 - **Django**
 
@@ -61,19 +82,19 @@ rodar servidor
 python manage.py runserver
 
 
-## REQUISITOS FUNCIONAIS
+## Requisitos Funcionais
 
-LOGIN ADMINISTRADORES
-DISPONIBILIDADE DE EVENTOS
-PÁGINA DE TRILHAS E EVENTOS
+RF1. Login Administradores
+RF2. Gestão de disponibilidade de Eventos e Temporadas
+RF3. Página de Trilhas e Eventos
+RF4. Página dos Parques (Unidades de Conservação)
+RF5. Gestão de Conteúdo e Novidades
 
+## Requisitos não Funcionais
 
-
-## REQUISITOS NÃO FUNCIONAIS
-
-DESEMPENHO RÁPIDO
-PRIVACIDADE DE DADOS
-INTERFACE INTUIIVA
-SEGURANÇA DO SITE
-SEGURANÇA DOS DADOS DA PÁGINA
-FLUIDEZ DE NAVEGAÇÃO
+RNF1. Desempenho rápido (suporte a múltiplos acessos simultâneos)
+RNF2. Privacidade e Segurança de Dados Pessoais dos Administradores
+RNF3. Interface Intuitiva e Amigável
+RNF4. Segurança do Site e Áreas Restritas
+RNF5. Alta Disponibilidade do Sistema
+RNF6. Fluidez de Navegação
