@@ -1,0 +1,27 @@
+# Ambiente Virtual
+mvptereverde/
+venv/
+.venv/
+env/
+ENV/
+
+# Byte-compiled / arquivos Python temporários
+__pycache__/
+*.py[cod]
+*$py.class
+__init__.py
+
+# Banco de Dados Local (Desenvolvimento)
+*.sqlite3
+
+# Arquivos de Configuração do Django (Onde ficam as senhas/chaves secretas)
+.env
+.env.local
+
+# Pastas de IDEs (VS Code, PyCharm, etc.)
+.vscode/
+.idea/
+
+# Sistema Operacional
+.DS_Store
+Thumbs.db
