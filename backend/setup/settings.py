@@ -29,6 +29,7 @@ INSTALLED_APPS = [
     'django.contrib.postgres',
     'tereverde',
     'rest_framework',
+    'corsheaders',
 ]
 
 MIDDLEWARE = [
@@ -39,6 +40,7 @@ MIDDLEWARE = [
     'django.contrib.auth.middleware.AuthenticationMiddleware',
     'django.contrib.messages.middleware.MessageMiddleware',
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
+    'corsheaders.middleware.CorsMiddleware',
 ]
 
 ROOT_URLCONF = 'setup.urls'
@@ -128,3 +130,17 @@ MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
 # SESSION AGE 5 Minutes
 SESSION_COOKIE_AGE = 300  # 5 minutes in seconds
 LOGIN_URL = '/authlogin/'
+
+CORS_ALLOWED_ORIGINS = [
+    "http://localhost:5173",  # Porta padrão do Vite/React
+    "http://127.0.0.1:5173",
+]
+
+
+# Impede que scripts maliciosos acessem os cookies de autenticação do administrador
+SESSION_COOKIE_HTTPONLY = True
+CSRF_COOKIE_HTTPONLY = True
+
+# Força o uso do protocolo seguro caso coloque o site no ar futuramente
+SECURE_BROWSER_XSS_FILTER = True
+SECURE_CONTENT_TYPE_NOSNIFF = True
