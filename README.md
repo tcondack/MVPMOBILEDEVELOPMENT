@@ -87,9 +87,9 @@ python manage.py runserver
 ## Requisitos Funcionais
 
 * **RF1.** Login Administradores
-* **RF2.** Gestão de disponibilidade de Eventos e Temporadas
+* **RF2.** Página dos Parques (Unidades de Conservação)
 * **RF3.** Página de Trilhas e Eventos
-* **RF4.** Página dos Parques (Unidades de Conservação)
+* **RF4.** Gestão de disponibilidade de Eventos Trilhas e Temporadas
 * **RF5.** Gestão de Conteúdo e Novidades
 
 ## Requisitos Não Funcionais
