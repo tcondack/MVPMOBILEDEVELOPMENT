@@ -46,7 +46,7 @@ Exigências
 ## Tecnologias Utilizadas
 - **Django**
 - **PostgreSQL**
--**React + Vite**
+- **React + Vite**
 
 
 ## Objetivos
