@@ -84,6 +84,7 @@ na pasta backend rodar o servidor
 python manage.py runserver
 
 Na pasta frontend rodar o servidor
+
 npm run dev
 
 ## Requisitos Funcionais
