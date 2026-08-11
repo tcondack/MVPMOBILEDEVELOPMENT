@@ -1,10 +1,14 @@
-from django.contrib.auth import authenticate
+from django.contrib.auth import authenticate, login
 from .models import Parque, Trilhas, Eventos, Novidades
 from .serializers import ParqueSerializer, TrilhasSerializer, EventosSerializer, NovidadesSerializer
 
-from rest_framework import status
+from rest_framework import status, viewsets
 from rest_framework.response import Response
 from rest_framework.decorators import api_view
+
+class ParqueViewSet (viewsets.ModelViewSet):
+    queryset = Parque.objects.all()
+    serializer_class = ParqueSerializer
 
 
 @api_view(['GET'])
@@ -45,7 +49,6 @@ def novidades_api(request):
 def login_api(request):
     """
     Autentica os administradores do Circuito Terê Verde.
-    Atende à exigência de Privacidade e Segurança do Edital.
     """
     username = request.data.get('username')
     password = request.data.get('password')
