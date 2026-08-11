@@ -53,6 +53,8 @@ def login_api(request):
     user = authenticate(username=username, password=password)
     
     if user is not None and user.is_staff:
+        ## cria sessao do usuário para manter ele logado nas próximas sessões.
+        login(request, user)
         return Response({
             'success': True,
             'message': 'Autenticação bem-sucedida.',
