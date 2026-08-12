@@ -2,45 +2,41 @@ from django.contrib.auth import authenticate, login
 from .models import Parque, Trilhas, Eventos, Novidades
 from .serializers import ParqueSerializer, TrilhasSerializer, EventosSerializer, NovidadesSerializer
 
-from rest_framework import status, viewsets
+from rest_framework import status, viewsets, permissions
 from rest_framework.response import Response
 from rest_framework.decorators import api_view
+
+# permissão somente admin fazer CRUD
+
+class IsAdminOrReadOnly(permissions.BasePermission):
+    ## qualquer pessoa lê, mas somente admin faz alteração
+    def has_permission(self, request, view):
+        if request.method in permissions.SAFE_METHODS:
+            return True
+        return bool(
+            request.user and request.user.is_authenticated and request.user.is_staff
+        )
+# CRUD parques, trilhas eventos e novidades
 
 class ParqueViewSet (viewsets.ModelViewSet):
     queryset = Parque.objects.all()
     serializer_class = ParqueSerializer
+    permission_classes = [IsAdminOrReadOnly]
 
+class TrilhasViewSet (viewsets.ModelViewSet):
+    queryset = Trilhas.objects.all()
+    serializer_class = TrilhasSerializer
+    permission_classes = [IsAdminOrReadOnly]
 
-@api_view(['GET'])
-def parques_api(request):
-    """Retorna a lista de todos os parques cadastrados no PostgreSQL"""
-    parques = Parque.objects.all()
-    serializer = ParqueSerializer(parques, many=True)
-    return Response(serializer.data, status=status.HTTP_200_OK)
+class EventosViewSet (viewsets.ModelViewSet):
+    queryset = Eventos.objects.all()
+    serializer_class = EventosSerializer
+    permission_classes = [IsAdminOrReadOnly]
 
-
-@api_view(['GET'])
-def trilhas_api(request):
-    """Retorna todas as trilhas cadastradas"""
-    trilhas = Trilhas.objects.all()
-    serializer = TrilhasSerializer(trilhas, many=True)
-    return Response(serializer.data, status=status.HTTP_200_OK)
-
-
-@api_view(['GET'])
-def eventos_api(request):
-    """Retorna a agenda completa de eventos e temporadas"""
-    eventos = Eventos.objects.all()
-    serializer = EventosSerializer(eventos, many=True)
-    return Response(serializer.data, status=status.HTTP_200_OK)
-
-
-@api_view(['GET'])
-def novidades_api(request):
-    """Retorna o mural de notícias e educação ambiental"""
-    novidades = Novidades.objects.all()
-    serializer = NovidadesSerializer(novidades, many=True)
-    return Response(serializer.data, status=status.HTTP_200_OK)
+class NovidadesViewSet (viewsets.ModelViewSet):
+    queryset = Novidades.objects.all()
+    serializer_class = NovidadesSerializer
+    permission_classes = [IsAdminOrReadOnly]
 
 
 # LOGIN DE ADMINISTRADORES
@@ -64,7 +60,7 @@ def login_api(request):
             'user': {
                 'username': user.username,
                 'email': user.email,
-                'is_admin': user.is_superuser
+                'is_admin': user.is_staff
             }
         }, status=status.HTTP_200_OK)
     

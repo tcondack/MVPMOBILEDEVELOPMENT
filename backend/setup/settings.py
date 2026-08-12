@@ -128,7 +128,7 @@ MEDIA_URL = '/media/'
 MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
 
 # SESSION AGE 5 Minutes
-SESSION_COOKIE_AGE = 300  # 5 minutes in seconds
+SESSION_COOKIE_AGE = 1800  # 30 minutes in seconds
 LOGIN_URL = '/authlogin/'
 
 CORS_ALLOWED_ORIGINS = [
@@ -144,3 +144,12 @@ CSRF_COOKIE_HTTPONLY = True
 # Força o uso do protocolo seguro caso coloque o site no ar futuramente
 SECURE_BROWSER_XSS_FILTER = True
 SECURE_CONTENT_TYPE_NOSNIFF = True
+
+REST_FRAMEWORK = {
+    'DEFAULT_AUTHENTICATION_CLASSES': [
+        'rest_framework.authentication.SessionAuthentication',
+    ],
+    'DEFAULT_PERMISSION_CLASSES': [
+        'rest_framework.permissions.AllowAny',
+    ],
+}

@@ -1,20 +1,16 @@
 from django.urls import path, include
-from . import views
 from rest_framework.routers import DefaultRouter
-from .views import (ParqueViewSet)
+from .views import (ParqueViewSet, TrilhasViewSet, EventosViewSet, NovidadesViewSet, login_api)
 
 
 router = DefaultRouter()
 
 router.register(r'parques', ParqueViewSet, basename='parques')
+router.register(r'trilhas',TrilhasViewSet, basename='trilhas')
+router.register(r'eventos', EventosViewSet, basename='eventos')
+router.register(r'novidades', NovidadesViewSet, basename='novidades')
 
 urlpatterns = [
     path('', include(router.urls)),
-    
-
-    path('parques/', views.parques_api, name='parques_api'),
-    path('trilhas/', views.trilhas_api, name='trilhas_api'),
-    path('eventos/', views.eventos_api, name='eventos_api'),
-    path('novidades/', views.novidades_api, name='novidades_api'),
-    path('login/', views.login_api, name='login_api'),
+    path('login/', login_api, name='login_api'),
 ]
