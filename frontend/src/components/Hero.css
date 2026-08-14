@@ -1,0 +1,19 @@
+.hero {
+    padding: 60px 20 px;
+    text-align: center;
+}
+.hero h1{
+    font-size: 36px;
+    margin-bottom: 16px;
+}
+
+.hero p {
+    margin-bottom: 24px;
+}
+.hero input{
+    width: 100%;
+    max-width: 500px;
+    padding: 14px;
+    border: 1 px solid #ccc;
+    border-radius: 8px;
+}

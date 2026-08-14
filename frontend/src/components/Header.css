@@ -1,0 +1,19 @@
+.header{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 20px;
+    background: #1a3a24;
+    color: white;
+}
+.header-logo {
+    font-size: 20px;
+}
+.header-menu{
+    border: 0;
+    background: transparent;
+    color: white;
+    font-size: 28px;
+    cursor: pointer;
+}
+
