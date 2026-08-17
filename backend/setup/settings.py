@@ -14,7 +14,9 @@ SECRET_KEY = 'django-insecure-j28sn+*yy@$_5y1j)xdnqhq*#w0n6cp=ut$p(oygjhw-vl4r8d
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = [
+'127.0.0.1'
+]
 
 
 # Application definition
@@ -27,9 +29,12 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
     'django.contrib.postgres',
-    'tereverde',
     'rest_framework',
+    'rest_framework.authtoken', 
     'corsheaders',
+    'drf_spectacular',
+    'drf_spectacular_sidecar',
+    'tereverde',
 ]
 
 MIDDLEWARE = [
@@ -152,4 +157,16 @@ REST_FRAMEWORK = {
     'DEFAULT_PERMISSION_CLASSES': [
         'rest_framework.permissions.AllowAny',
     ],
+    
+    'DEFAULT_SCHEMA_CLASS': 'drf_spectacular.openapi.AutoSchema',
+}
+
+SPECTACULAR_SETTINGS = {
+    'TITLE': 'Minha API Django',
+    'DESCRIPTION': 'Documentação completa dos endpoints da aplicação.',
+    'VERSION': '1.0.0',
+    'SERVE_INCLUDE_SCHEMA': False,
+    'SWAGGER_UI_DIST': 'SIDECAR',
+    'SWAGGER_UI_FAVICON_HREF': 'SIDECAR',
+    'REDOC_DIST': 'SIDECAR',
 }

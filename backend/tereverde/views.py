@@ -1,10 +1,11 @@
 from django.contrib.auth import authenticate, login
 from .models import Parque, Trilhas, Eventos, Novidades
-from .serializers import ParqueSerializer, TrilhasSerializer, EventosSerializer, NovidadesSerializer
+from .serializers import ParqueSerializer, TrilhasSerializer, LoginSerializer, EventosSerializer, NovidadesSerializer
 
 from rest_framework import status, viewsets, permissions
 from rest_framework.response import Response
 from rest_framework.decorators import api_view
+from drf_spectacular.utils import extend_schema
 
 # permissão somente admin fazer CRUD
 
@@ -41,6 +42,9 @@ class NovidadesViewSet (viewsets.ModelViewSet):
 
 # LOGIN DE ADMINISTRADORES
 
+@extend_schema(
+        request=LoginSerializer, responses={200:dict, 401:dict}
+)
 @api_view(['POST'])
 def login_api(request):
     """

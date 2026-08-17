@@ -1,0 +1,894 @@
+openapi: 3.0.3
+info:
+  title: Minha API Django
+  version: 1.0.0
+  description: Documentação completa dos endpoints da aplicação.
+paths:
+  /api/eventos/:
+    get:
+      operationId: eventos_list
+      tags:
+      - eventos
+      security:
+      - cookieAuth: []
+      responses:
+        '200':
+          content:
+            application/json:
+              schema:
+                type: array
+                items:
+                  $ref: '#/components/schemas/Eventos'
+          description: ''
+    post:
+      operationId: eventos_create
+      tags:
+      - eventos
+      requestBody:
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/Eventos'
+          application/x-www-form-urlencoded:
+            schema:
+              $ref: '#/components/schemas/Eventos'
+          multipart/form-data:
+            schema:
+              $ref: '#/components/schemas/Eventos'
+        required: true
+      security:
+      - cookieAuth: []
+      responses:
+        '201':
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Eventos'
+          description: ''
+  /api/eventos/{id}/:
+    get:
+      operationId: eventos_retrieve
+      parameters:
+      - in: path
+        name: id
+        schema:
+          type: integer
+        description: A unique integer value identifying this Evento.
+        required: true
+      tags:
+      - eventos
+      security:
+      - cookieAuth: []
+      responses:
+        '200':
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Eventos'
+          description: ''
+    put:
+      operationId: eventos_update
+      parameters:
+      - in: path
+        name: id
+        schema:
+          type: integer
+        description: A unique integer value identifying this Evento.
+        required: true
+      tags:
+      - eventos
+      requestBody:
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/Eventos'
+          application/x-www-form-urlencoded:
+            schema:
+              $ref: '#/components/schemas/Eventos'
+          multipart/form-data:
+            schema:
+              $ref: '#/components/schemas/Eventos'
+        required: true
+      security:
+      - cookieAuth: []
+      responses:
+        '200':
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Eventos'
+          description: ''
+    patch:
+      operationId: eventos_partial_update
+      parameters:
+      - in: path
+        name: id
+        schema:
+          type: integer
+        description: A unique integer value identifying this Evento.
+        required: true
+      tags:
+      - eventos
+      requestBody:
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/PatchedEventos'
+          application/x-www-form-urlencoded:
+            schema:
+              $ref: '#/components/schemas/PatchedEventos'
+          multipart/form-data:
+            schema:
+              $ref: '#/components/schemas/PatchedEventos'
+      security:
+      - cookieAuth: []
+      responses:
+        '200':
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Eventos'
+          description: ''
+    delete:
+      operationId: eventos_destroy
+      parameters:
+      - in: path
+        name: id
+        schema:
+          type: integer
+        description: A unique integer value identifying this Evento.
+        required: true
+      tags:
+      - eventos
+      security:
+      - cookieAuth: []
+      responses:
+        '204':
+          description: No response body
+  /api/login/:
+    post:
+      operationId: login_create
+      description: Autentica os administradores do Circuito Terê Verde.
+      tags:
+      - login
+      requestBody:
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/Login'
+          application/x-www-form-urlencoded:
+            schema:
+              $ref: '#/components/schemas/Login'
+          multipart/form-data:
+            schema:
+              $ref: '#/components/schemas/Login'
+        required: true
+      security:
+      - cookieAuth: []
+      - {}
+      responses:
+        '200':
+          content:
+            application/json:
+              schema:
+                type: object
+                additionalProperties: {}
+          description: ''
+        '401':
+          content:
+            application/json:
+              schema:
+                type: object
+                additionalProperties: {}
+          description: ''
+  /api/novidades/:
+    get:
+      operationId: novidades_list
+      tags:
+      - novidades
+      security:
+      - cookieAuth: []
+      responses:
+        '200':
+          content:
+            application/json:
+              schema:
+                type: array
+                items:
+                  $ref: '#/components/schemas/Novidades'
+          description: ''
+    post:
+      operationId: novidades_create
+      tags:
+      - novidades
+      requestBody:
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/Novidades'
+          application/x-www-form-urlencoded:
+            schema:
+              $ref: '#/components/schemas/Novidades'
+          multipart/form-data:
+            schema:
+              $ref: '#/components/schemas/Novidades'
+        required: true
+      security:
+      - cookieAuth: []
+      responses:
+        '201':
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Novidades'
+          description: ''
+  /api/novidades/{id}/:
+    get:
+      operationId: novidades_retrieve
+      parameters:
+      - in: path
+        name: id
+        schema:
+          type: integer
+        description: A unique integer value identifying this Novidade.
+        required: true
+      tags:
+      - novidades
+      security:
+      - cookieAuth: []
+      responses:
+        '200':
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Novidades'
+          description: ''
+    put:
+      operationId: novidades_update
+      parameters:
+      - in: path
+        name: id
+        schema:
+          type: integer
+        description: A unique integer value identifying this Novidade.
+        required: true
+      tags:
+      - novidades
+      requestBody:
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/Novidades'
+          application/x-www-form-urlencoded:
+            schema:
+              $ref: '#/components/schemas/Novidades'
+          multipart/form-data:
+            schema:
+              $ref: '#/components/schemas/Novidades'
+        required: true
+      security:
+      - cookieAuth: []
+      responses:
+        '200':
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Novidades'
+          description: ''
+    patch:
+      operationId: novidades_partial_update
+      parameters:
+      - in: path
+        name: id
+        schema:
+          type: integer
+        description: A unique integer value identifying this Novidade.
+        required: true
+      tags:
+      - novidades
+      requestBody:
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/PatchedNovidades'
+          application/x-www-form-urlencoded:
+            schema:
+              $ref: '#/components/schemas/PatchedNovidades'
+          multipart/form-data:
+            schema:
+              $ref: '#/components/schemas/PatchedNovidades'
+      security:
+      - cookieAuth: []
+      responses:
+        '200':
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Novidades'
+          description: ''
+    delete:
+      operationId: novidades_destroy
+      parameters:
+      - in: path
+        name: id
+        schema:
+          type: integer
+        description: A unique integer value identifying this Novidade.
+        required: true
+      tags:
+      - novidades
+      security:
+      - cookieAuth: []
+      responses:
+        '204':
+          description: No response body
+  /api/parques/:
+    get:
+      operationId: parques_list
+      tags:
+      - parques
+      security:
+      - cookieAuth: []
+      responses:
+        '200':
+          content:
+            application/json:
+              schema:
+                type: array
+                items:
+                  $ref: '#/components/schemas/Parque'
+          description: ''
+    post:
+      operationId: parques_create
+      tags:
+      - parques
+      requestBody:
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/Parque'
+          application/x-www-form-urlencoded:
+            schema:
+              $ref: '#/components/schemas/Parque'
+          multipart/form-data:
+            schema:
+              $ref: '#/components/schemas/Parque'
+        required: true
+      security:
+      - cookieAuth: []
+      responses:
+        '201':
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Parque'
+          description: ''
+  /api/parques/{id}/:
+    get:
+      operationId: parques_retrieve
+      parameters:
+      - in: path
+        name: id
+        schema:
+          type: integer
+        description: A unique integer value identifying this parque.
+        required: true
+      tags:
+      - parques
+      security:
+      - cookieAuth: []
+      responses:
+        '200':
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Parque'
+          description: ''
+    put:
+      operationId: parques_update
+      parameters:
+      - in: path
+        name: id
+        schema:
+          type: integer
+        description: A unique integer value identifying this parque.
+        required: true
+      tags:
+      - parques
+      requestBody:
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/Parque'
+          application/x-www-form-urlencoded:
+            schema:
+              $ref: '#/components/schemas/Parque'
+          multipart/form-data:
+            schema:
+              $ref: '#/components/schemas/Parque'
+        required: true
+      security:
+      - cookieAuth: []
+      responses:
+        '200':
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Parque'
+          description: ''
+    patch:
+      operationId: parques_partial_update
+      parameters:
+      - in: path
+        name: id
+        schema:
+          type: integer
+        description: A unique integer value identifying this parque.
+        required: true
+      tags:
+      - parques
+      requestBody:
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/PatchedParque'
+          application/x-www-form-urlencoded:
+            schema:
+              $ref: '#/components/schemas/PatchedParque'
+          multipart/form-data:
+            schema:
+              $ref: '#/components/schemas/PatchedParque'
+      security:
+      - cookieAuth: []
+      responses:
+        '200':
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Parque'
+          description: ''
+    delete:
+      operationId: parques_destroy
+      parameters:
+      - in: path
+        name: id
+        schema:
+          type: integer
+        description: A unique integer value identifying this parque.
+        required: true
+      tags:
+      - parques
+      security:
+      - cookieAuth: []
+      responses:
+        '204':
+          description: No response body
+  /api/trilhas/:
+    get:
+      operationId: trilhas_list
+      tags:
+      - trilhas
+      security:
+      - cookieAuth: []
+      responses:
+        '200':
+          content:
+            application/json:
+              schema:
+                type: array
+                items:
+                  $ref: '#/components/schemas/Trilhas'
+          description: ''
+    post:
+      operationId: trilhas_create
+      tags:
+      - trilhas
+      requestBody:
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/Trilhas'
+          application/x-www-form-urlencoded:
+            schema:
+              $ref: '#/components/schemas/Trilhas'
+          multipart/form-data:
+            schema:
+              $ref: '#/components/schemas/Trilhas'
+        required: true
+      security:
+      - cookieAuth: []
+      responses:
+        '201':
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Trilhas'
+          description: ''
+  /api/trilhas/{id}/:
+    get:
+      operationId: trilhas_retrieve
+      parameters:
+      - in: path
+        name: id
+        schema:
+          type: integer
+        description: A unique integer value identifying this Trilha.
+        required: true
+      tags:
+      - trilhas
+      security:
+      - cookieAuth: []
+      responses:
+        '200':
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Trilhas'
+          description: ''
+    put:
+      operationId: trilhas_update
+      parameters:
+      - in: path
+        name: id
+        schema:
+          type: integer
+        description: A unique integer value identifying this Trilha.
+        required: true
+      tags:
+      - trilhas
+      requestBody:
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/Trilhas'
+          application/x-www-form-urlencoded:
+            schema:
+              $ref: '#/components/schemas/Trilhas'
+          multipart/form-data:
+            schema:
+              $ref: '#/components/schemas/Trilhas'
+        required: true
+      security:
+      - cookieAuth: []
+      responses:
+        '200':
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Trilhas'
+          description: ''
+    patch:
+      operationId: trilhas_partial_update
+      parameters:
+      - in: path
+        name: id
+        schema:
+          type: integer
+        description: A unique integer value identifying this Trilha.
+        required: true
+      tags:
+      - trilhas
+      requestBody:
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/PatchedTrilhas'
+          application/x-www-form-urlencoded:
+            schema:
+              $ref: '#/components/schemas/PatchedTrilhas'
+          multipart/form-data:
+            schema:
+              $ref: '#/components/schemas/PatchedTrilhas'
+      security:
+      - cookieAuth: []
+      responses:
+        '200':
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Trilhas'
+          description: ''
+    delete:
+      operationId: trilhas_destroy
+      parameters:
+      - in: path
+        name: id
+        schema:
+          type: integer
+        description: A unique integer value identifying this Trilha.
+        required: true
+      tags:
+      - trilhas
+      security:
+      - cookieAuth: []
+      responses:
+        '204':
+          description: No response body
+components:
+  schemas:
+    DificuldadeEnum:
+      enum:
+      - Fácil
+      - Médio
+      - Difícil
+      type: string
+      description: |-
+        * `Fácil` - Fácil
+        * `Médio` - Médio
+        * `Difícil` - Difícil
+    Eventos:
+      type: object
+      description: Serializer para o modelo Eventos
+      properties:
+        id:
+          type: integer
+          readOnly: true
+        nome:
+          type: string
+          maxLength: 120
+        descricao:
+          type: string
+        data_inicio:
+          type: string
+          format: date-time
+        data_fim:
+          type: string
+          format: date-time
+        preco:
+          type: string
+          format: decimal
+          pattern: ^-?\d{0,4}(?:\.\d{0,2})?$
+          nullable: true
+        imagem:
+          type: string
+          format: uri
+          nullable: true
+        ativo:
+          type: boolean
+        parque:
+          type: integer
+      required:
+      - data_fim
+      - data_inicio
+      - descricao
+      - id
+      - nome
+      - parque
+    Login:
+      type: object
+      properties:
+        username:
+          type: string
+        password:
+          type: string
+          writeOnly: true
+      required:
+      - password
+      - username
+    Novidades:
+      type: object
+      description: Serializer para o modelo Novidades
+      properties:
+        id:
+          type: integer
+          readOnly: true
+        titulo:
+          type: string
+          maxLength: 150
+        conteudo:
+          type: string
+        data_publicacao:
+          type: string
+          format: date-time
+          readOnly: true
+        ativo:
+          type: boolean
+        parque:
+          type: integer
+      required:
+      - conteudo
+      - data_publicacao
+      - id
+      - parque
+      - titulo
+    Parque:
+      type: object
+      description: Serializer para o modelo Parque
+      properties:
+        id:
+          type: integer
+          readOnly: true
+        nome:
+          type: string
+          maxLength: 120
+        descricao:
+          type: string
+        localizacao:
+          type: string
+        horario_funcionamento:
+          type: string
+          maxLength: 100
+        taxa_entrada:
+          type: string
+          format: decimal
+          pattern: ^-?\d{0,3}(?:\.\d{0,2})?$
+          nullable: true
+        imagem:
+          type: string
+          format: uri
+          nullable: true
+        dias_funcionamento:
+          type: array
+          items:
+            type: string
+            maxLength: 20
+        obs_disponibilidade:
+          type: string
+          nullable: true
+          description: 'Ex: Fechado para manutenção nas segundas-feiras de Janeiro.'
+          maxLength: 255
+      required:
+      - descricao
+      - horario_funcionamento
+      - id
+      - localizacao
+      - nome
+    PatchedEventos:
+      type: object
+      description: Serializer para o modelo Eventos
+      properties:
+        id:
+          type: integer
+          readOnly: true
+        nome:
+          type: string
+          maxLength: 120
+        descricao:
+          type: string
+        data_inicio:
+          type: string
+          format: date-time
+        data_fim:
+          type: string
+          format: date-time
+        preco:
+          type: string
+          format: decimal
+          pattern: ^-?\d{0,4}(?:\.\d{0,2})?$
+          nullable: true
+        imagem:
+          type: string
+          format: uri
+          nullable: true
+        ativo:
+          type: boolean
+        parque:
+          type: integer
+    PatchedNovidades:
+      type: object
+      description: Serializer para o modelo Novidades
+      properties:
+        id:
+          type: integer
+          readOnly: true
+        titulo:
+          type: string
+          maxLength: 150
+        conteudo:
+          type: string
+        data_publicacao:
+          type: string
+          format: date-time
+          readOnly: true
+        ativo:
+          type: boolean
+        parque:
+          type: integer
+    PatchedParque:
+      type: object
+      description: Serializer para o modelo Parque
+      properties:
+        id:
+          type: integer
+          readOnly: true
+        nome:
+          type: string
+          maxLength: 120
+        descricao:
+          type: string
+        localizacao:
+          type: string
+        horario_funcionamento:
+          type: string
+          maxLength: 100
+        taxa_entrada:
+          type: string
+          format: decimal
+          pattern: ^-?\d{0,3}(?:\.\d{0,2})?$
+          nullable: true
+        imagem:
+          type: string
+          format: uri
+          nullable: true
+        dias_funcionamento:
+          type: array
+          items:
+            type: string
+            maxLength: 20
+        obs_disponibilidade:
+          type: string
+          nullable: true
+          description: 'Ex: Fechado para manutenção nas segundas-feiras de Janeiro.'
+          maxLength: 255
+    PatchedTrilhas:
+      type: object
+      description: Serializer para o modelo Trilhas
+      properties:
+        id:
+          type: integer
+          readOnly: true
+        nome:
+          type: string
+          maxLength: 120
+        descricao:
+          type: string
+        dificuldade:
+          $ref: '#/components/schemas/DificuldadeEnum'
+        distancia:
+          type: string
+          format: decimal
+          pattern: ^-?\d{0,6}(?:\.\d{0,2})?$
+        imagem:
+          type: string
+          format: uri
+          nullable: true
+        aviso_disponibilidade:
+          type: string
+          nullable: true
+          maxLength: 255
+        ativo:
+          type: boolean
+        parque:
+          type: integer
+    Trilhas:
+      type: object
+      description: Serializer para o modelo Trilhas
+      properties:
+        id:
+          type: integer
+          readOnly: true
+        nome:
+          type: string
+          maxLength: 120
+        descricao:
+          type: string
+        dificuldade:
+          $ref: '#/components/schemas/DificuldadeEnum'
+        distancia:
+          type: string
+          format: decimal
+          pattern: ^-?\d{0,6}(?:\.\d{0,2})?$
+        imagem:
+          type: string
+          format: uri
+          nullable: true
+        aviso_disponibilidade:
+          type: string
+          nullable: true
+          maxLength: 255
+        ativo:
+          type: boolean
+        parque:
+          type: integer
+      required:
+      - descricao
+      - dificuldade
+      - distancia
+      - id
+      - nome
+      - parque
+  securitySchemes:
+    cookieAuth:
+      type: apiKey
+      in: cookie
+      name: sessionid
