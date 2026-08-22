@@ -1,14 +1,31 @@
 .hero {
-    padding: 60px 20 px;
-    text-align: center;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    width: 100%;
+    box-sizing: border-box;
+    padding: 60px 25px 50px 25px;
+    display: flex;
+    flex-direction:column;
+    align-items: flex-start;
+    
+
 }
 .hero h1{
     font-size: 36px;
-    margin-bottom: 16px;
+    font-weight: bold;
+    line-height: 1.15;
+    margin: 0 0 15px 0;
+    color: #95d5b2;
 }
 
 .hero p {
     margin-bottom: 24px;
+    color: #95d5b2;
+    font-size: 15px;
+    line-height: 1.5;
+    margin: 0 0 35px 0;
+    max-width: 500px;
 }
 .hero input{
     width: 100%;
@@ -16,4 +33,18 @@
     padding: 14px;
     border: 1 px solid #ccc;
     border-radius: 8px;
+}
+.search-icon {
+    color: #8a9299;
+    font-size: 16px;
+    margin-right: 10px;
+}
+.search-input {
+    border: none;
+    background: transparent;
+    width: 100%;
+    padding: 10px 0;
+    font-size: 15px;
+    color: #122518;
+    outline: none;
 }

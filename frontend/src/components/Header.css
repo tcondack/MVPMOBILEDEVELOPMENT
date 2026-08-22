@@ -5,6 +5,7 @@
     padding: 20px;
     background: #1a3a24;
     color: white;
+    position: relative;
 }
 .header-logo {
     font-size: 20px;
@@ -17,3 +18,38 @@
     cursor: pointer;
 }
 
+.nav-menu{
+    position: absolute;
+    top: 100%;
+    right: 0;
+    background-color: #132b1a;
+    width: 200px;
+    display: flex;
+    flex-direction: column;
+    box-shadow: 0px 4px 12px rgba(0, 0, 0,0.4);
+    opacity: 0;
+    visibility: hidden;
+    transform: translateY(-10px);
+    transition: all 0.3s ease-in-out;
+    z-index: 1000;
+}
+
+.nav-menu.visivel{
+    opacity: 1;
+    visibility: visible;
+    transform: translateY(0);
+}
+.nav-menu a {
+    color: #ffffff;
+    text-decoration: none;
+    padding: 15px 20px;
+    font-family: sans-serif;
+    font-size: 16px;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+    transition: background 0.2s ease;
+}
+
+.nav-menu a:hover {
+    background-color: rgba(255, 255, 255, 0.1);
+    color: #b7e4c7; /* Muda a cor do texto para um verde claro */
+}

@@ -1,13 +1,21 @@
 import Header from './components/Header.jsx'
 import Hero from './components/Hero.jsx'
 import Statistics from './components/Statistics.jsx'
-function App() {
+import { useState } from 'react'
 
+function App() {
+const [termoBusca, setTermoBusca] = useState('')
+
+  function realizaBusca(texto) {
+    setTermoBusca(texto)
+  }
   return (
     <>
     <Header />
-    <Hero />
+    <Hero onBuscar={realizaBusca} />
     <Statistics />
+
+    <p>Pesquisando por:{termoBusca}</p>
     </>
   )
 }

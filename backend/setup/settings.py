@@ -137,8 +137,8 @@ SESSION_COOKIE_AGE = 1800  # 30 minutes in seconds
 LOGIN_URL = '/authlogin/'
 
 CORS_ALLOWED_ORIGINS = [
-    "http://localhost:5174",  # Porta padrão do Vite/React
-    "http://127.0.0.1:5174",
+    "http://localhost:5173",  # Porta padrão do Vite/React
+    "http://127.0.0.1:5173",
 ]
 
 

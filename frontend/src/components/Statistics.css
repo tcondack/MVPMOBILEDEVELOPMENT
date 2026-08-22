@@ -9,3 +9,7 @@
     flex-direction: column;
     gap: 4px;
 }
+
+.Statistics-item:hover {
+  color: var(--verde-claro);
+}
