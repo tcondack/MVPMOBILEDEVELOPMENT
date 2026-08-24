@@ -1,6 +1,6 @@
 import { useState, useEffect } from 'react';
 import { CCard, CCardBody, CCardText, CCardTitle, CCardImage } from '@coreui/react'
-import './parques.css';
+import './style.css';
 
 function Novidades() {
   const [novidades, setNovidades] = useState([]);
@@ -21,7 +21,7 @@ return (
     <section>
       <h2>Novidades</h2>
       <div className='cards-conteiner'>
-        {novidades.map(parque => {
+        {novidades.map(novidades => {
           const imagemUrl = novidades.imagem?.startsWith('http')
           ? novidades.imagem :`http://127.0.0.1:8000${novidades.imagem}`
 
@@ -34,7 +34,7 @@ return (
                 src={imagemUrl}
                 alt={novidades.imagem}
                 ></CCardImage>
-                <CCardText>{novidades.descricao}</CCardText>
+                <CCardText>{novidades.conteudo}</CCardText>
               </CCardBody>
             </CCard>
         )

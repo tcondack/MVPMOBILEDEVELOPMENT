@@ -1,6 +1,6 @@
 import { useState, useEffect } from 'react';
 import { CCard, CCardBody, CCardText, CCardTitle, CCardImage } from '@coreui/react'
-import './parques.css';
+import './style.css';
 
 function Parques() {
   const [parques, setParques] = useState([]);

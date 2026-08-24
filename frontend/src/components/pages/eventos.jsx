@@ -1,6 +1,6 @@
 import { useState, useEffect } from 'react';
 import { CCard, CCardBody, CCardText, CCardTitle, CCardImage } from '@coreui/react'
-import './parques.css';
+import './style.css';
 
 function Eventos() {
   const [eventos, setEventos] = useState([]);
@@ -21,7 +21,7 @@ return (
     <section>
       <h2>Eventos</h2>
       <div className='cards-conteiner'>
-        {eventos.map(parque => {
+        {eventos.map(eventos => {
           const imagemUrl = eventos.imagem?.startsWith('http')
           ? eventos.imagem :`http://127.0.0.1:8000${eventos.imagem}`
 

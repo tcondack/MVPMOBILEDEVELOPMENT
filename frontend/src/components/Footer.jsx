@@ -11,13 +11,6 @@ function Footer(){
             <h3 className="footer-title">Terê Verde</h3>
             <p className="footer-subtitle">Circuito de Parques e Trilhas de Teresópolis</p>
             </div>
-
-            <nav className="footer-links">
-            <a href="#parques" className="footer-link">Parques</a>
-            <a href="#trilhas" className="footer-link">Trilhas</a>
-            <a href="#eventos" className="footer-link">Eventos</a>
-            <a href="#novidades" className="footer-link">Novidades</a>
-            </nav>
         </div>
 
         <div className="footer-bottom">

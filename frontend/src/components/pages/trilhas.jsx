@@ -1,6 +1,6 @@
 import { useState, useEffect } from 'react';
 import { CCard, CCardBody, CCardText, CCardTitle, CCardImage } from '@coreui/react'
-import './trilhas.css';
+import './style.css';
 
 function Trilhas() {
   const [trilhas, setTrilhas] = useState([]);
