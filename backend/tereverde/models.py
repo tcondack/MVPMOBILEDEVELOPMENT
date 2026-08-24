@@ -125,6 +125,8 @@ class Novidades(models.Model):
     conteudo = models.TextField()
     data_publicacao = models.DateTimeField(auto_now_add=True)
     ativo = models.BooleanField(default=True)
+    imagem = models.ImageField(upload_to='novidades/', null=True, blank=True)
+
     class Meta:
             verbose_name="Novidade"
             verbose_name_plural="Novidades"

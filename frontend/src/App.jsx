@@ -1,10 +1,12 @@
 import Header from './components/Header.jsx'
 import Hero from './components/Hero.jsx'
 import Statistics from './components/Statistics.jsx'
-import { useState } from 'react'
+import Parques from './components/pages/parques.jsx'
+import Trilhas from './components/pages/trilhas.jsx'
+import Eventos from './components/pages/eventos.jsx'
+import Novidades from './components/pages/novidades.jsx'
 
 function App() {
-const [termoBusca, setTermoBusca] = useState('')
 
   function realizaBusca(texto) {
     setTermoBusca(texto)
@@ -12,10 +14,13 @@ const [termoBusca, setTermoBusca] = useState('')
   return (
     <>
     <Header />
-    <Hero onBuscar={realizaBusca} />
+    <Hero />
     <Statistics />
-
-    <p>Pesquisando por:{termoBusca}</p>
+    <Parques />
+    <Trilhas />
+    <Eventos />
+    <Novidades />
+    <p></p>
     </>
   )
 }
