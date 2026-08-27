@@ -1,10 +1,11 @@
 from django.contrib.auth import authenticate, login
 from .models import Parque, Trilhas, Eventos, Novidades
 from .serializers import ParqueSerializer, TrilhasSerializer, LoginSerializer, EventosSerializer, NovidadesSerializer
-
+from rest_framework.authentication import SessionAuthentication, BasicAuthentication
+from rest_framework.permissions import AllowAny
 from rest_framework import status, viewsets, permissions
 from rest_framework.response import Response
-from rest_framework.decorators import api_view
+from rest_framework.decorators import api_view, permission_classes, authentication_classes
 from drf_spectacular.utils import extend_schema
 
 # permissão somente admin fazer CRUD
@@ -46,6 +47,8 @@ class NovidadesViewSet (viewsets.ModelViewSet):
         request=LoginSerializer, responses={200:dict, 401:dict}
 )
 @api_view(['POST'])
+@permission_classes([AllowAny])
+@authentication_classes([SessionAuthentication, BasicAuthentication])
 def login_api(request):
     """
     Autentica os administradores do Circuito Terê Verde.

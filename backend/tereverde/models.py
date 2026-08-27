@@ -59,6 +59,8 @@ class Trilhas(models.Model):
     imagem = models.ImageField(upload_to='trilhas/', null=True, blank=True)
     aviso_disponibilidade = models.CharField(max_length=255, null=True, blank=True, help_text="")
     ativo = models.BooleanField(default=True)
+    limite_entrada = models.TimeField(null=True, blank=True)
+    limite_saida = models.TimeField(null=True, blank=True)
     class Meta:
         verbose_name="Trilha"
         verbose_name_plural="Trilhas"
