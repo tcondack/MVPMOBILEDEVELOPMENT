@@ -9,25 +9,25 @@ function Statistics(){
     const [totalNovidades, setTotalNovidades]= useState(0)
 
     useEffect(()=>{
-        fetch ('http://127.0.0.1:8000/api/parques/')
+        fetch ('/api/parques/')
         .then(Response => Response.json())
         .then(data => {setTotalParques(data.length)})
         .catch(err =>console.error("Erro Parques", err));
     },[]);
     useEffect(()=>{
-        fetch ('http://127.0.0.1:8000/api/trilhas/')
+        fetch ('/api/trilhas/')
         .then(Response => Response.json())
         .then(data => {setTotalTrilhas(data.length)})
         .catch(err =>console.error("Erro Trilhas", err));
     },[]);
     useEffect(()=>{
-        fetch ('http://127.0.0.1:8000/api/eventos/')
+        fetch ('/api/eventos/')
         .then(Response => Response.json())
         .then(data => {setTotalEventos(data.length)})
         .catch(err =>console.error("Erro eventos", err));
     },[]);
     useEffect(()=>{
-        fetch ('http://127.0.0.1:8000/api/novidades/')
+        fetch ('/api/novidades/')
         .then(Response => Response.json())
         .then(data => {setTotalNovidades(data.length)})
         .catch(err =>console.error("Erro novidades", err));
