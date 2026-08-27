@@ -1,0 +1,166 @@
+[
+{
+  "model": "tereverde.parque",
+  "pk": 1,
+  "fields": {
+    "nome": "Parque Nacional da Serra dos Órgãos - PARNASO",
+    "descricao": "O Parque Nacional da Serra dos Órgãos protege a excepcional paisagem e a biodiversidade deste trecho da Serra do Mar na Região Serrana do Rio de Janeiro. São 19.855 hectares protegidos nos municípios de Teresópolis, Petrópolis, Magé e Guapimirim.\r\n\r\nCriado em 30 de novembro de 1939, o PARNASO é o terceiro parque mais antigo do país, representando um importante marco na história das Unidades de Conservação brasileiras. (Conheça um pouco mais da história do parque)\r\n\r\nÉ um dos melhores locais do país para a prática de esportes de montanha, como escalada, caminhada, rapel e outros; além de ter fantásticas cachoeiras. O Parque tem a maior rede de trilhas do Brasil. São mais de 200 quilômetros de trilhas em todos os níveis de dificuldade: desde a trilha suspensa, acessível até a cadeirantes, até a pesada Travessia Petrópolis-Teresópolis, com 30 Km de subidas e descidas pela parte alta das montanhas.\r\n\r\nEntre as escaladas destacam-se o Dedo de Deus, considerado o marco inicial da escalada no país, a Agulha do Diabo e centenas de vias de todos os níveis de dificuldade, desde iniciantes até alguns dos maiores bigwalls do país.\r\n\r\nO Parque abriga mais de 2.800 espécies de plantas catalogadas pela ciência, 462 espécies de aves, 100 de mamíferos, 103 de anfíbios e 83 de répteis, incluindo 130 animais ameaçados de extinção e muitas espécies endêmicas (que só ocorrem neste local).\r\n\r\nAssim como todas as unidades de conservação federais, o PARNASO é administrado pelo Instituto Chico Mendes de Conservação da Biodiversidade (ICMBio), autarquia federal responsável também pela conservação de espécies ameaçadas.",
+    "localizacao": "Av. Rotariana, s/n - Soberbo, Teresópolis - RJ, 25960-602",
+    "horario_funcionamento": "07:00 as 17:00",
+    "taxa_entrada": "15.00",
+    "imagem": "parques/Parque_Nacional_da_Serra_dos_Órgãos_-_PARNASO.jpeg",
+    "dias_funcionamento": "[]",
+    "obs_disponibilidade": null
+  }
+},
+{
+  "model": "tereverde.parque",
+  "pk": 2,
+  "fields": {
+    "nome": "Parque Estadual dos Três Picos",
+    "descricao": "O Parque Estadual dos Três Picos (PETP) é a maior Unidade de Conservação de proteção integral do Estado do Rio de Janeiro, com mais de 65 mil hectares. Embora os picos que dão nome ao parque (Pico Maior, Médio e Menor) fiquem na região de Salinas, em Nova Friburgo, o município de Teresópolis abriga estruturas fundamentais de visitação pública, com núcleos estruturados e subsedes ideais para ecoturismo, caminhadas leves e lazer em família.",
+    "localizacao": "Meudon, Teresópolis - RJ",
+    "horario_funcionamento": "08:00 as 16:00",
+    "taxa_entrada": "0.00",
+    "imagem": "parques/Parque_Estadual_dos_Três_Picos_-_Sede_Teresópolis.jpg",
+    "dias_funcionamento": "[]",
+    "obs_disponibilidade": null
+  }
+},
+{
+  "model": "tereverde.parque",
+  "pk": 3,
+  "fields": {
+    "nome": "Parque Natural Municipal Montanhas de Teresópolis",
+    "descricao": "O Parque Natural Municipal Montanhas de Teresópolis (PNMMT) é a maior unidade de conservação de proteção integral criada por um município no Estado do Rio de Janeiro. Com mais de 5.300 hectares de extensão, o parque protege importantes remanescentes da Mata Atlântica e imponentes afloramentos rochosos. O acesso a todas as áreas públicas do parque é inteiramente gratuito.",
+    "localizacao": "R. Servidão Pedro Mendes Silva Filho, 58 - Granja Florestal, Teresópolis - RJ",
+    "horario_funcionamento": "08:00 as 17:00",
+    "taxa_entrada": "0.00",
+    "imagem": "parques/Pedra-da-Tartaruga-em-Teresopolis.jpg",
+    "dias_funcionamento": "[]",
+    "obs_disponibilidade": null
+  }
+},
+{
+  "model": "tereverde.trilhas",
+  "pk": 1,
+  "fields": {
+    "parque": 2,
+    "nome": "Pico do Urubu",
+    "descricao": "O Pico do Urubu em Teresópolis, também conhecido como Mirante Bela Vista, possui cerca de 1.318 metros de altitude e fica localizado dentro do Parque Estadual dos Três Picos, no Núcleo Jacarandá / Vale da Revolta, no bairro Meudon. É uma excelente alternativa para quem busca um visual panorâmico incrível da Serra dos Órgãos sem o nível extremo de exigência física de outras subidas da região.",
+    "dificuldade": "Médio",
+    "distancia": "5000.00",
+    "imagem": "trilhas/pico_do_urubu.webp",
+    "aviso_disponibilidade": "Aberto",
+    "ativo": true,
+    "limite_entrada": null,
+    "limite_saida": null
+  }
+},
+{
+  "model": "tereverde.trilhas",
+  "pk": 2,
+  "fields": {
+    "parque": 3,
+    "nome": "Pedra da Tartaruga",
+    "descricao": "A Pedra da Tartaruga é uma das atrações mais famosas do Parque Natural Municipal Montanhas de Teresópolis, oferecendo uma vista panorâmica de 360 graus para a Serra dos Órgãos, os Três Picos e a Mulher de Pedra. A entrada é totalmente gratuita e o local se destaca por ter uma das trilhas mais acessíveis da região",
+    "dificuldade": "Médio",
+    "distancia": "1200.00",
+    "imagem": "trilhas/Pedra-da-Tartaruga-em-Teresopolis.jpg",
+    "aviso_disponibilidade": null,
+    "ativo": true,
+    "limite_entrada": null,
+    "limite_saida": null
+  }
+},
+{
+  "model": "tereverde.trilhas",
+  "pk": 3,
+  "fields": {
+    "parque": 1,
+    "nome": "Trilha Cartão Postal",
+    "descricao": "Com cerca de 1,2 km de extensão (ida e volta), é uma caminhada moderada de aproximadamente 2 horas. Ela leva a um mirante espetacular que enquadra o famoso pico Dedo de Deus em meio à vegetação nativa.",
+    "dificuldade": "Médio",
+    "distancia": "1200.00",
+    "imagem": "trilhas/trilha_cartao_postal.jpg",
+    "aviso_disponibilidade": null,
+    "ativo": true,
+    "limite_entrada": null,
+    "limite_saida": null
+  }
+},
+{
+  "model": "tereverde.trilhas",
+  "pk": 4,
+  "fields": {
+    "parque": 1,
+    "nome": "Portais de Hércules",
+    "descricao": "Os Portais de Hércules são amplamente considerados o mirante mais espetacular e imponente de toda a Serra dos Órgãos e um dos cenários de montanha mais bonitos do Brasil. Localizado no coração do Parque Nacional da Serra dos Órgãos (PARNASO), na divisa entre Petrópolis e Guapimirim, o mirante oferece uma vista panorâmica frontal e colossal de picos icônicos como o Dedo de Deus, o Escalavrado, o Dedo de Nossa Senhora e a Agulha do Diabo.\r\n\r\nExigência Física Extrema: São entre 22 km e 24 km de caminhada total (ida e volta), com um ganho de altitude acumulado que varia de 1.200 a 1.700 metros.Terreno Irregular: A subida inicial até os Castelos do Açú possui trechos íngremes de pedravangada (lajes de pedra) e subidas implacáveis (como a subida do \"Isabeloca\").Navegação Complexa: O trecho que vai dos Castelos do Açú até o mirante dos Portais não possui trilha marcada ou sinalizada. É preciso caminhar sobre vegetação de campos de altitude (capim alto) e lajes de pedra uniformes.Clima Instável: A região é famosa pelo \"ruço\" (neblina densa que surge em minutos), reduzindo a visibilidade a poucos metros e tornando a desorientação extremamente fácil.",
+    "dificuldade": "Difícil",
+    "distancia": "24.03",
+    "imagem": "trilhas/PORTAIS_DE_HÉRCULES.webp",
+    "aviso_disponibilidade": null,
+    "ativo": true,
+    "limite_entrada": null,
+    "limite_saida": null
+  }
+},
+{
+  "model": "tereverde.eventos",
+  "pk": 1,
+  "fields": {
+    "parque": 1,
+    "nome": "Abertura da Temporada de Montanhismo (ATM) do Parque Nacional da Serra dos Órgãos",
+    "descricao": "A Abertura da Temporada de Montanhismo (ATM) do Parque Nacional da Serra dos Órgãos (PARNASO), realizada em maio de 2026 em Teresópolis, celebrou os 185 anos da primeira ascensão à Pedra do Sino. O evento contou com palestras históricas, trilhas guiadas, shows, exposições culturais e o tradicional Desafio 360 Parnaso",
+    "data_inicio": "2026-05-16T12:00:00Z",
+    "data_fim": "2026-05-17T19:00:00Z",
+    "preco": "10.00",
+    "imagem": "eventos/montanhismo.jpg",
+    "ativo": true
+  }
+},
+{
+  "model": "tereverde.eventos",
+  "pk": 2,
+  "fields": {
+    "parque": 2,
+    "nome": "3ª CAMINHADA ECO-PEDAGÓGICA - PARQUE ESTADUAL DOS TRÊS PICOS",
+    "descricao": "VENHA VIVER UMA EXPERIÊNCIA TRANSFORMADORA CONOSCO!\r\nPrepare-se para uma jornada única pelo Parque Estadual dos Três Picos - Núcleo Jequitibá, onde a natureza exuberante da Mata Atlântica te espera com seus tesouros escondidos!",
+    "data_inicio": "2026-08-03T11:30:00Z",
+    "data_fim": "2026-08-03T15:30:00Z",
+    "preco": "0.00",
+    "imagem": "eventos/caminhada_no_parque.jpg",
+    "ativo": true
+  }
+},
+{
+  "model": "tereverde.novidades",
+  "pk": 1,
+  "fields": {
+    "parque": 1,
+    "titulo": "Nova Trilha",
+    "conteudo": "Uma nova trilha foi adicionada ao Parque:\r\n \"PORTAIS DE HÉRCULES\"\r\nOs Portais de Hércules são amplamente considerados o mirante mais espetacular e imponente de toda a Serra dos Órgãos e um dos cenários de montanha mais bonitos do Brasil.",
+    "data_publicacao": "2026-08-17T13:56:35.494Z",
+    "ativo": true,
+    "imagem": "novidades/PORTAIS_DE_HÉRCULES.webp"
+  }
+},
+{
+  "model": "auth.user",
+  "pk": 1,
+  "fields": {
+    "password": "pbkdf2_sha256$1500000$KMsg0AqWcXYHY8RRLmm9lV$IrOZXyOu8d/nMXUEblSDumndCOZVIzzqKcQWX0ve/YQ=",
+    "last_login": "2026-08-26T18:37:44.502Z",
+    "is_superuser": true,
+    "username": "tk",
+    "first_name": "",
+    "last_name": "",
+    "email": "tiagocondack@gmail.com",
+    "is_staff": true,
+    "is_active": true,
+    "date_joined": "2026-08-08T19:18:06.494Z",
+    "groups": [],
+    "user_permissions": []
+  }
+}
+]
