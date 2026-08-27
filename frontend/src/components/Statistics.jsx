@@ -1,5 +1,7 @@
 import './Statistics.css'
 import { useState, useEffect } from 'react'
+import { Link } from 'react-router-dom'
+
 function Statistics(){
     const [totalParques, setTotalParques] = useState(0)
     const [totalTrilhas, setTotalTrilhas] = useState(0)
@@ -35,22 +37,22 @@ function Statistics(){
             <div className="Statistics-item">
                 <span>🌲</span>
                 <strong>{totalParques}</strong>
-                <p>Parques</p>
+                <Link to="/parques">Parques</Link>
             </div>
             <div className="Statistics-item">
                 <span>△</span>
                 <strong>{totalTrilhas}</strong>
-                <p>Trilhas</p>
+                <Link to="/trilhas">Trilhas</Link>
             </div>
             <div className="Statistics-item">
                 <span>📅</span>
                 <strong>{totalEventos}</strong>
-                <p>Eventos</p>
+                <Link to="/eventos">Eventos</Link>
             </div>
             <div className="Statistics-item">
                 <span>📅</span>
                 <strong>{totalNovidades}</strong>
-                <p>Novidades</p>
+                <Link to="/novidades">Novidades</Link>
             </div>
         </section>
     )

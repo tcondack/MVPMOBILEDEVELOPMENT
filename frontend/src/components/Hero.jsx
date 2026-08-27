@@ -1,9 +1,7 @@
 import imagemFloresta from '../assets/heroimage.jpg'
-import { useState } from 'react'
 import './Hero.css'
 
 function Hero (){
-    const [texto, setTexto] = useState('')
 
     const estiloFundo = {
             backgroundImage: `linear-gradient(rgba(26, 58, 36, 0.45), rgba(18, 37, 24, 0.95)), url(${imagemFloresta})`

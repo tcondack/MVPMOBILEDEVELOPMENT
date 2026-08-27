@@ -15,21 +15,21 @@
   max-width: 480px; /* Garante tamanho perfeito na tela do Galaxy J7 Pro */
   margin: 0 auto;
   padding: 15px;
-  background-color: var(--areia-fundo) !important;
+  background-color: var(--areia-fundo);
 }
 
 /* --- ESTILOS UNIFICADOS PARA AS SEÇÕES (Parques, Trilhas, Eventos, Novidades) --- */
 
 section {
   width: 100%;
-  background-color: var(--areia-fundo) !important;
+  background-color: var(--areia-fundo);
   margin-bottom: 20px;
 }
 
 /* O título principal de cada seção unificada */
 section h2 {
   font-size: 22px;
-  color: var(--vegetacao-header) !important; /* Injeta o Verde Escuro nos títulos */
+  color: var(--vegetacao-header); /* Injeta o Verde Escuro nos títulos */
   margin-top: 30px;
   margin-bottom: 15px;
   font-weight: bold;

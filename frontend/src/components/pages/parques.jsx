@@ -1,6 +1,10 @@
 import { useState, useEffect } from 'react';
 import { CCard, CCardBody, CCardText, CCardTitle, CCardImage } from '@coreui/react'
 import './style.css';
+import Header from '../Header';
+import Hero from '../Hero';
+import Footer from '../Footer';
+import Statistics from '../Statistics';
 
 function Parques() {
   const [parques, setParques] = useState([]);
@@ -18,6 +22,10 @@ function Parques() {
 
 
 return (
+  <div className='pagina-conteiner' >
+    <Header />
+    <Hero />
+    <Statistics />
     <section>
       <h2>Parques</h2>
       <div className='cards-conteiner'>
@@ -42,6 +50,8 @@ return (
       </div>
 
     </section>
+    <Footer />
+  </div>
   )
 }
 

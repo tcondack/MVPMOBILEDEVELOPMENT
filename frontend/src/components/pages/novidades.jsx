@@ -1,6 +1,10 @@
 import { useState, useEffect } from 'react';
 import { CCard, CCardBody, CCardText, CCardTitle, CCardImage } from '@coreui/react'
 import './style.css';
+import Footer from '../Footer';
+import Header from '../Header';
+import Hero from '../Hero';
+import Statistics from '../Statistics';
 
 function Novidades() {
   const [novidades, setNovidades] = useState([]);
@@ -18,6 +22,10 @@ function Novidades() {
 
 
 return (
+  <div className='pagina-conteiner' >
+    <Header />
+    <Hero />
+    <Statistics />
     <section>
       <h2>Novidades</h2>
       <div className='cards-conteiner'>
@@ -28,7 +36,7 @@ return (
           return (
             <CCard key={novidades.id}>
               <CCardBody>
-              <CCardTitle>{novidades.nome}</CCardTitle>
+              <CCardTitle>{novidades.titulo}</CCardTitle>
               <CCardImage 
                 orientation='top'
                 src={imagemUrl}
@@ -42,6 +50,8 @@ return (
       </div>
 
     </section>
+    <Footer />
+  </div>
   )
 }
 

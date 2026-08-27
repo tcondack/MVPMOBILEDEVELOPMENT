@@ -1,29 +1,23 @@
-import Header from './components/Header.jsx'
-import Hero from './components/Hero.jsx'
-import Statistics from './components/Statistics.jsx'
+import {Routes, Route} from 'react-router-dom'
 import Parques from './components/pages/parques.jsx'
 import Trilhas from './components/pages/trilhas.jsx'
 import Eventos from './components/pages/eventos.jsx'
 import Novidades from './components/pages/novidades.jsx'
 import Login from './components/Login/login.jsx'
-import Footer from './components/Footer.jsx'
+import Inicio from './components/pages/inicio.jsx'
 
 function App() {
   return (
-    <>
-    <div className='app-conteiner'>
-    <Header />
-    <Hero />
-    <Statistics />
-    <Parques />
-    <Trilhas />
-    <Eventos />
-    <Novidades />
-    <Login />
-    <Footer />
-    <p></p>
+      <div className='app-conteiner'>
+        <Routes>
+          <Route path='/' element={<Inicio />}/>
+          <Route path='/parques' element={<Parques />} />
+          <Route path='/trilhas' element={<Trilhas />}/>
+          <Route path='/eventos' element={<Eventos />} />
+          <Route path='/novidades' element= {<Novidades/>} />
+          <Route path='/login'  element={<Login />} />
+        </Routes>
     </div>
-    </>
   )
 }
 export default App

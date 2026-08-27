@@ -1,6 +1,10 @@
 import { useState, useEffect } from 'react';
 import { CCard, CCardBody, CCardText, CCardTitle, CCardImage } from '@coreui/react'
 import './style.css';
+import Footer from '../Footer';
+import Header from '../Header';
+import Hero from '../Hero';
+import Statistics from '../Statistics';
 
 function Trilhas() {
   const [trilhas, setTrilhas] = useState([]);
@@ -18,6 +22,10 @@ function Trilhas() {
 
 
 return (
+  <div className='pagina-conteiner' >
+    <Header />
+    <Hero />
+    <Statistics />
     <section>
       <h2>Trilhas</h2>
       <div className='cards-conteiner'>
@@ -42,6 +50,8 @@ return (
       </div>
 
     </section>
+    <Footer />
+  </div>
   )
 }
 

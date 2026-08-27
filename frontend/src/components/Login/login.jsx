@@ -1,35 +1,69 @@
 import { FaUser, FaLock } from "react-icons/fa";
-import React from "react";
 import { useState } from "react";
 import "./login.css";
+import Footer from '../Footer';
+import Header from '../Header';
+import Hero from '../Hero';
 
 
 function Login (){
     const [username, setUserName]= useState("");
     const [password, setPassword]= useState("");
-
-    const handleSubmit =(event)=>{
+    const [erro, setErro]=useState("");
+   
+    const handleSubmit =async (event)=>{
         event.preventDefault();
-        console.log("Envio");
+        setErro('');
+
+        try {
+            const response = await fetch('http://127.0.0.1:8000/api/login/', {
+                method: 'POST',
+                credentials: 'include',
+                headers: {
+                    'Content-Type': 'application/json',
+                },
+                
+                body: JSON.stringify({
+                    username: username,
+                    password: password,
+                }),
+            });
+            const data = await response.json();
+
+            if (response.ok) {
+                console.log("Enviado com sucesso!");
+                window.location.replace ('http://127.0.0.1:8000/admin/');
+            } else {
+                setErro(data.message || "Usuário ou senha inválidos.");
+            }
+        } catch (error) {
+            console.error("Erro na requisição:", error);
+        }
     };
 
-    return
+    return (
+    <div className='pagina-conteiner' >
+    <Header />
+    <Hero />
     <div className="conteiner">
         <form onSubmit={handleSubmit}>
             <h1>Login Administrativo</h1>
             <div>
-                <input type ='email' placeholder="E-mail"
+                <input type ='text' placeholder="Nome"
                 onChange={(e) =>setUserName(e.target.value)}/>
-                <FaUserme  className='icon' />
+                <FaUser className='icon' />
             </div>
             <div>
                 <input type="password" placeholder="Senha"
                 onChange={(e)=>setPassword(e.target.value)}/>
                 <FaLock className="lock" />
             </div>
+            {erro && <p className="mensagem-erro">{erro}</p>}
             <button>Entrar</button>
         </form>
     </div>
-
+    <Footer />
+    </div>
+    )
 }
 export default Login

@@ -1,5 +1,6 @@
-import { useState} from 'react'
-import './Header.css'
+import { useState} from 'react';
+import {Link} from 'react-router-dom';
+import './Header.css';
 
 function Header (){
     const [menuAberto, setMenuAberto] = useState(false);
@@ -18,11 +19,12 @@ function Header (){
             </button>
 
                 <nav className={`nav-menu ${menuAberto ? 'visivel' :''}`}>
-                <a href="#parques" onClick={toggleMenu}>Parques</a>
-                <a href="#trilhas" onClick={toggleMenu}>Trilhas</a>
-                <a href="#eventos" onClick={toggleMenu}>Eventos</a>
-                <a href="#novidades" onClick={toggleMenu}>Novidades</a>
-                <a href="#Login" onClick={toggleMenu}>Login</a>
+                <Link to="/">Início</Link>
+                <Link to="/parques">Parques</Link>
+                <Link to= "/trilhas">Trilhas</Link>
+                <Link to="/eventos">Eventos</Link>
+                <Link to="/novidades">Novidades</Link>
+                <Link to="/login">Login</Link>
                 </nav>
         </header>
     )

@@ -1,6 +1,10 @@
 import { useState, useEffect } from 'react';
 import { CCard, CCardBody, CCardText, CCardTitle, CCardImage } from '@coreui/react'
 import './style.css';
+import Footer from '../Footer';
+import Header from '../Header';
+import Hero from '../Hero';
+import Statistics from '../Statistics';
 
 function Eventos() {
   const [eventos, setEventos] = useState([]);
@@ -18,6 +22,10 @@ function Eventos() {
 
 
 return (
+  <div className='pagina-conteiner' >
+    <Header />
+    <Hero />
+    <Statistics />
     <section>
       <h2>Eventos</h2>
       <div className='cards-conteiner'>
@@ -42,6 +50,8 @@ return (
       </div>
 
     </section>
+    <Footer />
+  </div>
   )
 }
 
