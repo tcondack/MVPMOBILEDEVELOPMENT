@@ -11,11 +11,14 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 # Quick-start development settings - unsuitable for production
 # See https://docs.djangoproject.com/en/6.1/howto/deployment/checklist/
 
-# SECURITY WARNING: keep the secret key used in production secret!
-SECRET_KEY = 'django-insecure-j28sn+*yy@$_5y1j)xdnqhq*#w0n6cp=ut$p(oygjhw-vl4r8d'
-
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = False
+
+
+ALLOWED_HOSTS = [
+    "127.0.0.1",
+    "localhost",
+]
 
 # Application definition
 
@@ -136,6 +139,7 @@ LOGIN_URL = '/authlogin/'
 CORS_ALLOWED_ORIGINS = [
     "http://127.0.0.1:5173",
     "http://127.0.0.1:8000",
+    "https://mvpmobiledevelopment.vercel.app",
 ]
 CORS_ALLOW_CREDENTIALS = True
 

@@ -9,7 +9,7 @@ import Statistics from '../Statistics';
 function Parques() {
   const [parques, setParques] = useState([]);
   useEffect(() => {
-    fetch('http://127.0.0.1:8000/api/parques/')
+    fetch('/api/parques/')
       .then(response => response.json())
       .then(dados => {
         console.log(dados)

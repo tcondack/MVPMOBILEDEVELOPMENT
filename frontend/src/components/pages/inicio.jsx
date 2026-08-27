@@ -1,12 +1,14 @@
 import Footer from '../Footer';
 import Header from '../Header';
 import Hero from '../Hero';
+import Statistics from '../Statistics'
 
 function Inicio (){
 return(
     <div className='pagina-conteiner' >
     <Header />
     <Hero />
+    <Statistics />
     <section className="apresentacao">
         <div className="apresentacao-container">
 
