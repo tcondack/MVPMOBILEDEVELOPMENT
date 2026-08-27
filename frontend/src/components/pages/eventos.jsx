@@ -9,7 +9,7 @@ import Statistics from '../Statistics';
 function Eventos() {
   const [eventos, setEventos] = useState([]);
   useEffect(() => {
-    fetch('http://127.0.0.1:8000/api/eventos/')
+    fetch('/api/eventos/')
       .then(response => response.json())
       .then(dados => {
         console.log(dados)
@@ -31,7 +31,7 @@ return (
       <div className='cards-conteiner'>
         {eventos.map(eventos => {
           const imagemUrl = eventos.imagem?.startsWith('http')
-          ? eventos.imagem :`http://127.0.0.1:8000${eventos.imagem}`
+          ? eventos.imagem :`/media/${eventos.imagem}`
 
           return (
             <CCard key={eventos.id}>

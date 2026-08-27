@@ -9,7 +9,7 @@ import Statistics from '../Statistics';
 function Trilhas() {
   const [trilhas, setTrilhas] = useState([]);
   useEffect(() => {
-    fetch('http://127.0.0.1:8000/api/trilhas/')
+    fetch('/api/trilhas/')
       .then(response => response.json())
       .then(dados => {
         console.log(dados)
@@ -31,7 +31,7 @@ return (
       <div className='cards-conteiner'>
         {trilhas.map(trilhas => {
           const imagemUrl = trilhas.imagem?.startsWith('http')
-          ? trilhas.imagem :`http://127.0.0.1:8000${trilhas.imagem}`
+          ? trilhas.imagem :`/media/${trilhas.imagem}`
 
           return (
             <CCard key={trilhas.id}>

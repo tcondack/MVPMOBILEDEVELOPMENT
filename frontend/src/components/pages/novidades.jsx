@@ -9,7 +9,7 @@ import Statistics from '../Statistics';
 function Novidades() {
   const [novidades, setNovidades] = useState([]);
   useEffect(() => {
-    fetch('http://127.0.0.1:8000/api/novidades/')
+    fetch('/api/novidades/')
       .then(response => response.json())
       .then(dados => {
         console.log(dados)
@@ -31,7 +31,7 @@ return (
       <div className='cards-conteiner'>
         {novidades.map(novidades => {
           const imagemUrl = novidades.imagem?.startsWith('http')
-          ? novidades.imagem :`http://127.0.0.1:8000${novidades.imagem}`
+          ? novidades.imagem :`/media/${novidades.imagem}`
 
           return (
             <CCard key={novidades.id}>

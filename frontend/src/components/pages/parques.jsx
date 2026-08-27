@@ -31,7 +31,7 @@ return (
       <div className='cards-conteiner'>
         {parques.map(parque => {
           const imagemUrl = parque.imagem?.startsWith('http')
-          ? parque.imagem :`http://127.0.0.1:8000${parque.imagem}`
+          ? parque.imagem :`/media/${parque.imagem}`
 
           return (
             <CCard key={parque.id}>
