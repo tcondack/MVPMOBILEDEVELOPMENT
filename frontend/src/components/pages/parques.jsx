@@ -35,13 +35,14 @@ return (
 
           return (
             <CCard key={parque.id}>
-              <CCardTitle>{parque.nome}</CCardTitle>
+              
               <CCardImage 
                 orientation='top'
                 src={imagemUrl}
                 alt={parque.imagem}
                 ></CCardImage>
                 <CCardBody>
+                <CCardTitle>{parque.nome}</CCardTitle>
                 <CCardText>{parque.descricao}</CCardText>
               </CCardBody>
             </CCard>
