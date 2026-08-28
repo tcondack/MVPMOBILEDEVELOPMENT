@@ -18,6 +18,7 @@ DEBUG = False
 ALLOWED_HOSTS = [
     "127.0.0.1",
     "localhost",
+    "mvpmobiledevelopment.vercel.app",
 ]
 
 # Application definition
