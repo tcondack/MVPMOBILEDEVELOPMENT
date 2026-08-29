@@ -1,6 +1,6 @@
 .Statistics {
     display:flex;
-    justify-content: center;
+    justify-content: space-around;
     padding: 24px 20px;
     text-align: center;
     color: #114427;
