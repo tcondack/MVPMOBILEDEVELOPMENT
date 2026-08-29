@@ -4,12 +4,17 @@
     padding: 24px 20px;
     text-align: center;
     color: #114427;
+    flex-wrap: wrap;
 }
 .Statistics-item {
     display: flex;
     flex-direction: column;
-    gap: 4px;
     align-items: center;
+    text-align: center;
+    align-items: center;
+    flex: 1 1 40%; 
+    min-width: 120px;
+    padding: 12px;
 
 }
 .Statistics-item a {
@@ -20,4 +25,10 @@
 .Statistics-item:hover {
   color: var(--verde-claro);
   text-decoration: underline;
+}
+
+@media (min-width: 768px) {
+    .statistics-container, .stats-grid {
+        grid-template-columns: repeat(4, 1fr);
+    }
 }

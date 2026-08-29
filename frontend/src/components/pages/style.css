@@ -1,12 +1,13 @@
 section {
     background-color: var(--areia-fundo) !important;
     width: 100%;
+    box-sizing: border-box;
 }
 .cards-conteiner {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
     gap: 24px;
-    padding: 24px;
+    padding: 16px;
     background-color: var(--areia-fundo) !important; /* Remove o fundo preto entre os cards */
 }
 
@@ -37,10 +38,9 @@ section {
 
 .cards-conteiner .card-body {
     padding: 18px;
-    background-color: var(--branco) !important; /* Garante que a caixa de texto fique branca */
+    background-color: var(--branco) !important; 
 }
 
-/* Adicionado para mudar a cor dos títulos internos dos cards */
 .cards-conteiner .card-title {
     color: var(--vegetacao-header) !important;
     font-weight: bold;
@@ -50,13 +50,13 @@ section {
 .cards-conteiner .card-text {
     font-size: 0.95rem;
     line-height: 1.5;
-    color: #444444 !important; /* CORREÇÃO: Texto escuro legível sobre o fundo branco */
+    color: #444444 !important; 
 }
 
 section h2 {
   margin: 24px;
   font-size: 2rem;
-  color: var(--vegetacao-header) !important; /* CORREÇÃO: Título da seção em Verde Escuro */
+  color: var(--vegetacao-header) !important;
   text-align: center;
 }
 .apresentacao-container {
@@ -66,18 +66,19 @@ section h2 {
     margin-right: auto;
     display: grid;
     gap: 24px;
-    padding: 24px;
+    padding: 16px;
     background-color: var(--areia-fundo) !important;
     position: relative;
 }
 
 .apresentacao-container h1{
-    font-size: 36px;
+    font-size: clamp(1.8rem, 5vw, 2.3rem);
     font-weight: bold;
     line-height: 1.15;
     margin: 0 0 15px 0;
     color: #1ab35e;
     text-align: center;
+    word-break: break-word;
 }
 
 .apresentacao-container p {
@@ -89,5 +90,6 @@ section h2 {
     margin-left: auto;
     margin-right: auto;
     margin-bottom: 1.5rem;
+    max-width: 100%;
 
 }
