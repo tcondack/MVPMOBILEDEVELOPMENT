@@ -3,12 +3,14 @@
     justify-content: space-around;
     padding: 24px 20px;
     text-align: center;
+    color: #114427;
 }
 .Statistics-item {
     display: flex;
     flex-direction: column;
     gap: 4px;
     align-items: center;
+
 }
 .Statistics-item a {
     text-decoration: none;

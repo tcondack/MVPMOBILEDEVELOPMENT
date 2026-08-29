@@ -2,6 +2,7 @@ import Footer from '../Footer';
 import Header from '../Header';
 import Hero from '../Hero';
 import Statistics from '../Statistics'
+import './style.css'; 
 
 function Inicio (){
 return(

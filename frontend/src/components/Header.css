@@ -1,3 +1,9 @@
+.pagina-conteiner {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  background-color: var(--areia-fundo);
+}
 .header{
     display: flex;
     align-items: center;
@@ -52,4 +58,8 @@
 .nav-menu a:hover {
     background-color: rgba(255, 255, 255, 0.1);
     color: #b7e4c7; /* Muda a cor do texto para um verde claro */
+}
+.pagina-conteiner > section,
+.conteudo-principal {
+  flex: 1;
 }

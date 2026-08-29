@@ -43,12 +43,12 @@ return (
                 alt={trilhas.imagem}
                 ></CCardImage>
                 <CCardText>{trilhas.descricao}</CCardText>
-                <CCardText>{trilhas.dificuldade}</CCardText>
-                <CCardText>{trilhas.distancia}</CCardText>
-                <CCardText>{trilhas.aviso_disponibilidade}</CCardText>
+                <CCardText>Nível de dificuldade: {trilhas.dificuldade}</CCardText>
+                <CCardText>Tamanho do percurso: {trilhas.distancia} metros.</CCardText>
+                <CCardText>{trilhas.aviso_disponibilidade}</CCardText>                
+                <CCardText>Abertura da Trilha: {trilhas.limite_entrada}</CCardText>
+                <CCardText>Saída da Trilha até: {trilhas.limite_saida}</CCardText>
                 <CCardText>{trilhas.ativo}</CCardText>
-                <CCardText>{trilhas.limite_entrada}</CCardText>
-                <CCardText>{trilhas.limite_saida}</CCardText>
               </CCardBody>
             </CCard>
         )

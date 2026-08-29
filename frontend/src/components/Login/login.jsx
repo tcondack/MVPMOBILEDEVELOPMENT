@@ -48,12 +48,12 @@ function Login (){
     <div className="conteiner">
         <form onSubmit={handleSubmit}>
             <h1>Login Administrativo</h1>
-            <div>
+            <div className="inputs">
                 <input type ='text' placeholder="Nome"
                 onChange={(e) =>setUserName(e.target.value)}/>
                 <FaUser className='icon' />
             </div>
-            <div>
+            <div className="inputs">
                 <input type="password" placeholder="Senha"
                 onChange={(e)=>setPassword(e.target.value)}/>
                 <FaLock className="lock" />

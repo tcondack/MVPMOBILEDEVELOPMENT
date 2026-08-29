@@ -59,3 +59,35 @@ section h2 {
   color: var(--vegetacao-header) !important; /* CORREÇÃO: Título da seção em Verde Escuro */
   text-align: center;
 }
+.apresentacao-container {
+    width: 100%;
+    max-width: 900px;
+    margin-left: auto;
+    margin-right: auto;
+    display: grid;
+    gap: 24px;
+    padding: 24px;
+    background-color: var(--areia-fundo) !important;
+    position: relative;
+}
+
+.apresentacao-container h1{
+    font-size: 36px;
+    font-weight: bold;
+    line-height: 1.15;
+    margin: 0 0 15px 0;
+    color: #1ab35e;
+    text-align: center;
+}
+
+.apresentacao-container p {
+    color: #114427;
+    font-size: 15px;
+    line-height: 1.5;
+    max-width: 500px;
+    text-align: center;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 1.5rem;
+
+}

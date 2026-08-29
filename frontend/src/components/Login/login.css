@@ -1,6 +1,93 @@
 .conteiner {
+    width: 100%;
+    max-width: 450px;
+    margin-left: auto;
+    margin-right: auto;
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
     gap: 24px;
-    padding: 24px;
+    padding: 32px;
+    background-color: var(--areia-fundo) !important;
+    position: relative;
+    box-shadow: 0 4px 20px rgba(17, 68, 39, 0.08);
+    box-sizing: border-box;
+}
+.conteiner form {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+.conteiner h1{
+    font-size: 36px;
+    font-weight: bold;
+    line-height: 1.15;
+    margin: 0 0 15px 0;
+    color: #1ab35e;
+    text-align: center;
+}
+
+.conteiner button {
+    color: #114427;
+    
+}
+
+.inputs {
+    position: relative;
+    width: 100%;
+}
+
+.inputs input {
+    width: 100%;
+    padding: 14px 45px 14px 16px; 
+    font-size: 15px;
+    color: #114427;
+    background-color: #ffffff;
+    border: 1.5px solid #1ab35e44;
+    border-radius: 8px;
+    outline: none;
+    box-sizing: border-box;
+    transition: all 0.3s ease;
+}
+
+.inputs input:focus {
+    border-color: #1ab35e;
+    box-shadow: 0 0 0 3px rgba(26, 179, 94, 0.15);
+}
+
+.inputs .icon,
+.inputs .lock {
+    position: absolute;
+    right: 16px;
+    top: 50%;
+    transform: translateY(-50%);
+    color: #1ab35e; /* Verde da marca */
+    font-size: 18px;
+    pointer-events: none;
+}
+
+.conteiner button {
+    width: 100%;
+    padding: 14px;
+    font-size: 16px;
+    font-weight: bold;
+    color: #ffffff;
+    background-color: #114427;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.1s ease;
+}
+
+.conteiner button:hover {
+    background-color: #1ab35e; 
+}
+
+.conteiner button:active {
+    transform: scale(0.98);
+}
+
+.mensagem-erro {
+    color: #dc2626;
+    font-size: 14px;
+    text-align: center;
+    margin: -10px 0 0 0;
 }

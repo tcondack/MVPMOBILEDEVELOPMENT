@@ -34,7 +34,7 @@ class Parque(models.Model):
     localizacao = models.TextField()
     horario_funcionamento = models.CharField(max_length=100)
     taxa_entrada = models.DecimalField(max_digits=5, decimal_places=2, null=True, blank=True)
-    imagem = models.ImageField(upload_to='parques/', null=True, blank=True)
+    imagem = models.URLField(max_length=500, blank=True, null=True)
     dias_funcionamento = ArrayField(
         models.CharField(max_length=20),
         default=list,
@@ -56,7 +56,7 @@ class Trilhas(models.Model):
     descricao = models.TextField()
     dificuldade = models.CharField(max_length=30, choices=[('Fácil', 'Fácil'), ('Médio', 'Médio'), ('Difícil', 'Difícil')])
     distancia = models.DecimalField(max_digits=8, decimal_places=2)
-    imagem = models.ImageField(upload_to='trilhas/', null=True, blank=True)
+    imagem = models.URLField(max_length=500, blank=True, null=True)
     aviso_disponibilidade = models.CharField(max_length=255, null=True, blank=True, help_text="")
     ativo = models.BooleanField(default=True)
     limite_entrada = models.TimeField(null=True, blank=True)
@@ -83,7 +83,7 @@ class Eventos(models.Model):
     data_inicio = models.DateTimeField()
     data_fim = models.DateTimeField()
     preco = models.DecimalField(max_digits=6, decimal_places=2, null=True, blank=True)
-    imagem = models.ImageField(upload_to='eventos/', null=True, blank=True)
+    imagem = models.URLField(max_length=500, blank=True, null=True)
     ativo = models.BooleanField(default=True)
     class Meta:
             verbose_name="Evento"
@@ -127,7 +127,7 @@ class Novidades(models.Model):
     conteudo = models.TextField()
     data_publicacao = models.DateTimeField(auto_now_add=True)
     ativo = models.BooleanField(default=True)
-    imagem = models.ImageField(upload_to='novidades/', null=True, blank=True)
+    imagem = models.URLField(max_length=500, blank=True, null=True)
 
     class Meta:
             verbose_name="Novidade"
