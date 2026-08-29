@@ -1,10 +1,11 @@
 .Statistics {
     display:flex;
-    justify-content: space-around;
+    justify-content: center;
     padding: 24px 20px;
     text-align: center;
     color: #114427;
     flex-wrap: wrap;
+    gap: 40px;
 }
 .Statistics-item {
     display: flex;
@@ -12,14 +13,18 @@
     align-items: center;
     text-align: center;
     align-items: center;
-    flex: 1 1 40%; 
+    flex: 1 1 auto; 
     min-width: 120px;
     padding: 12px;
-
 }
-.Statistics-item a {
-    text-decoration: none;
-    color: inherit;
+@media (max-width: 768px) {
+    .Statistics {
+        flex-wrap: wrap;
+    }
+    
+    .Statistics-item {
+        flex: 1 1 40%;
+    }
 }
 
 .Statistics-item:hover {
