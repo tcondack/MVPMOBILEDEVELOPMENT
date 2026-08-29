@@ -43,6 +43,10 @@ return (
                 alt={eventos.imagem}
                 ></CCardImage>
                 <CCardText>{eventos.descricao}</CCardText>
+                <CCardText>{eventos.data_inicio}</CCardText>
+                <CCardText>{eventos.data_fim}</CCardText>
+                <CCardText>{eventos.preco}</CCardText>
+                <CCardText>{eventos.ativo}</CCardText>
               </CCardBody>
             </CCard>
         )

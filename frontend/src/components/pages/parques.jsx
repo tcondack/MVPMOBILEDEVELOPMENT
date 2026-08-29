@@ -44,6 +44,9 @@ return (
                 <CCardBody>
                 <CCardTitle>{parque.nome}</CCardTitle>
                 <CCardText>{parque.descricao}</CCardText>
+                <CCardText>{parque.localizacao}</CCardText>
+                <CCardText>{parque.taxa_entrada}</CCardText>
+                <CCardText>{parque.dias_funcionamento}</CCardText>
               </CCardBody>
             </CCard>
         )

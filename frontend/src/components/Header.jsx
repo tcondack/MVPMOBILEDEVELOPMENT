@@ -26,7 +26,6 @@ function Header (){
                 <Link to="/novidades">Novidades</Link>
                 <Link to="/login">Login</Link>
                 <Link to="/documentacao">Documentação</Link>
-                <a href="http://127.0.0.1:8000/api/docs/swagger/" target="_blank" rel="noopener noreferrer">Api</a>
                 </nav>
         </header>
     )

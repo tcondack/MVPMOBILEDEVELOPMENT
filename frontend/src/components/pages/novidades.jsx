@@ -43,6 +43,8 @@ return (
                 alt={novidades.imagem}
                 ></CCardImage>
                 <CCardText>{novidades.conteudo}</CCardText>
+                <CCardText>{novidades.conteudo}</CCardText>
+                <CCardText>{novidades.ativo}</CCardText>
               </CCardBody>
             </CCard>
         )

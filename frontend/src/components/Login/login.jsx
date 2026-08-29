@@ -16,7 +16,7 @@ function Login (){
         setErro('');
 
         try {
-            const response = await fetch('http://127.0.0.1:8000/api/login/', {
+            const response = await fetch('/api/login/', {
                 method: 'POST',
                 credentials: 'include',
                 headers: {
@@ -32,7 +32,7 @@ function Login (){
 
             if (response.ok) {
                 console.log("Enviado com sucesso!");
-                window.location.replace ('http://127.0.0.1:8000/admin/');
+                window.location.replace ('/admin/');
             } else {
                 setErro(data.message || "Usuário ou senha inválidos.");
             }

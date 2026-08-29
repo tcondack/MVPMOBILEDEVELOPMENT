@@ -43,6 +43,12 @@ return (
                 alt={trilhas.imagem}
                 ></CCardImage>
                 <CCardText>{trilhas.descricao}</CCardText>
+                <CCardText>{trilhas.dificuldade}</CCardText>
+                <CCardText>{trilhas.distancia}</CCardText>
+                <CCardText>{trilhas.aviso_disponibilidade}</CCardText>
+                <CCardText>{trilhas.ativo}</CCardText>
+                <CCardText>{trilhas.limite_entrada}</CCardText>
+                <CCardText>{trilhas.limite_saida}</CCardText>
               </CCardBody>
             </CCard>
         )
