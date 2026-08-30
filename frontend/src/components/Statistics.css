@@ -19,7 +19,7 @@
 }
 @media (max-width: 768px) {
     .Statistics {
-        flex-wrap: nowwrap;
+        flex-wrap: nowrap;
         gap: 4px;
         padding: 20px 8px;
         
