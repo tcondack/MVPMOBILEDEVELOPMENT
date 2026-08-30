@@ -19,11 +19,16 @@
 }
 @media (max-width: 768px) {
     .Statistics {
-        flex-wrap: wrap;
+        flex-wrap: nowwrap;
+        gap: 4px;
+        padding: 20px 8px;
+        
     }
     
     .Statistics-item {
         flex: 1 1 40%;
+        min-width:0;
+        padding 8px 2px;
     }
 }
 
