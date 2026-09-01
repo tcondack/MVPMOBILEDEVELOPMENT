@@ -54,7 +54,7 @@ return (
                 alt={eventos.imagem}
                 ></CCardImage>
                 <CCardText>{eventos.descricao}</CCardText>
-                <CCardText>O evento acontece no dia:{formataData(eventos.data_inicio)}</CCardText>
+                <CCardText>O evento acontece no dia: {formataData(eventos.data_inicio)}</CCardText>
                 <CCardText>Entrada: R$ {eventos.preco}</CCardText>
                 <CCardText>{eventos.ativo}</CCardText>
               </CCardBody>

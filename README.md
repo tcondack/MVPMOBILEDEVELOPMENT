@@ -11,6 +11,8 @@
 - [Execução do projeto](#Execução-do-Projeto)
 - [REQUISITOS FUNCIONAIS](#requisitos-funcionais)
 - [REQUISITOS NÃO FUNCIONAIS](#requisitos-não-funcionais)
+- [Escopo](#escopo)
+
 
 ## Aluno
 - TIAGO EVARISTO CONDACK	
@@ -93,17 +95,35 @@ npm run dev
 
 ## Requisitos Funcionais
 
-* **RF1.** Login Administradores
-* **RF2.** Página dos Parques (Unidades de Conservação)
-* **RF3.** Página de Trilhas e Eventos
-* **RF4.** Gestão de disponibilidade de Eventos, Trilhas e Temporadas
-* **RF5.** Gestão de Conteúdo e Novidades
+* **RF1.** Login Administradores com tela de login própria.
+* **RF2.** Página dos Parques (Unidades de Conservação), Trilhas e Eventos
+* **RF3.** Gestão de disponibilidade de Eventos,  Parques e Trilhas (horários de funcionamento, status Aberto/Fechado)
+* **RF4.** Gestão de Conteúdo e Novidades pelo Painel nativo (django admin)
 
 ## Requisitos Não Funcionais
 
 * **RNF1.** Desempenho rápido (suporte a múltiplos acessos simultâneos)
 * **RNF2.** Privacidade e Segurança de Dados Pessoais dos Administradores
 * **RNF3.** Interface Intuitiva e Amigável
-* **RNF4.** Segurança do Site e Áreas Restritas
+* **RNF4.** Segurança do Site e Área Restrita
 * **RNF5.** Alta Disponibilidade do Sistema
-* **RNF6.** Fluidez de Navegação
+* **RNF6.** Fluidez de Navegação.
+
+## Requisitos a serem implementados no Futuro
+
+* **RIF1.** Avaliações dos usuários.
+* **RIF2.** Busca por nome no acervo pelos parques e trilhas.
+* **RIF3.** Pagamento online dos eventos.
+* **RIF4.** Notificações de compra e reserva por e-mail.
+
+## Escopo
+
+### O que o MVP faz
+- Consulta pública de Parques, Trilhas, Eventos e Novidades
+- Gestão de conteúdo via painel administrativo (Django Admin)
+- Autenticação de administradores com tela de login própria
+- Gestão de disponibilidade de Eventos, Parques e Trilhas (horários de funcionamento, status Aberto/Fechado)
+
+### Fora do escopo (versão atual)
+- Sistema de reservas ou agendamento de visitas
+- Múltiplos níveis de permissão de administrador (hoje há apenas superusuário)
