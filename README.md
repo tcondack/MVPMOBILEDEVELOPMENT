@@ -69,7 +69,7 @@ Todos que possuem interesse no ecoturismo, desde moradores da cidade a turistas 
 
 Esboço inicial da interface, elaborado na fase de planejamento do MVP:
 
-![Esboço inicial](prototipos/tereverde.png)
+![Esboço inicial](Protótipos/tereverde.png)
 
 ## Execução do Projeto
 
