@@ -109,7 +109,7 @@ npm run dev
 * **RNF5.** Alta Disponibilidade do Sistema
 * **RNF6.** Fluidez de Navegação.
 
-## Requisitos a serem implementados no Futuro
+## Requisitos com implementação no Futura
 
 * **RIF1.** Avaliações dos usuários.
 * **RIF2.** Busca por nome no acervo pelos parques e trilhas.
