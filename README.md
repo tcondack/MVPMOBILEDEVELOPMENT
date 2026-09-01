@@ -67,6 +67,10 @@ Todos que possuem interesse no ecoturismo, desde moradores da cidade a turistas 
 
 ## Protótipos
 
+Esboço inicial da interface, elaborado na fase de planejamento do MVP:
+
+![Esboço inicial](prototipos/tereverde.png)
+
 ## Execução do Projeto
 
 instalação do python

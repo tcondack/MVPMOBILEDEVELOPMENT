@@ -50,3 +50,15 @@ class logintest (TestCase):
         self.assertEqual(response.json()["success"], False)
 
 
+    def test_sem_cadastro(self):
+            response = self.client.post(
+                "/api/login/",data=json.dumps({
+                    "username":"Getulio",
+                    "password":"senha123456",
+                 }),
+                content_type ='application/json'
+            )
+            self.assertEqual(response.status_code, 401)
+            self.assertEqual(response.json()["success"], False)
+
+
