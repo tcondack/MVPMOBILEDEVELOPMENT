@@ -20,6 +20,17 @@ function Eventos() {
       });
 }, []);
 
+function formataData(dataISO) {
+  const data = new Date(dataISO);
+  return new Intl.DateTimeFormat('pt-BR', {
+    day: '2-digit',
+    month: 'long',
+    year: 'numeric',
+    hour: '2-digit',
+    minute: '2-digit',
+  }).format(data);
+}
+
 
 return (
   <div className='pagina-conteiner' >
@@ -43,7 +54,7 @@ return (
                 alt={eventos.imagem}
                 ></CCardImage>
                 <CCardText>{eventos.descricao}</CCardText>
-                <CCardText>O evento acontece no dia:{eventos.data_inicio}</CCardText>
+                <CCardText>O evento acontece no dia:{formataData(eventos.data_inicio)}</CCardText>
                 <CCardText>Entrada: R$ {eventos.preco}</CCardText>
                 <CCardText>{eventos.ativo}</CCardText>
               </CCardBody>
