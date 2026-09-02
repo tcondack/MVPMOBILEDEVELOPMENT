@@ -5,11 +5,12 @@ import Header from '../Header';
 import Hero from '../Hero';
 import Footer from '../Footer';
 import Statistics from '../Statistics';
+import { API_URL } from '../../services/api';
 
 function Parques() {
   const [parques, setParques] = useState([]);
   useEffect(() => {
-    fetch('/api/parques/')
+    fetch(`${API_URL}/api/parques/`)
       .then(response => response.json())
       .then(dados => {
         console.log(dados)
@@ -32,7 +33,7 @@ return (
         {parques.map(parque => {
           const imagemUrl = parque.imagem?.startsWith('http')
           ? parque.imagem :`/media/${parque.imagem}`
-
+        const statusClass = parque.statusOperacao ? parque.statusOperacao.toLowerCase() : 'Aberto';
           return (
             <CCard key={parque.id}>
               
@@ -43,6 +44,11 @@ return (
                 ></CCardImage>
                 <CCardBody>
                 <CCardTitle>{parque.nome}</CCardTitle>
+                <div>
+                  <span className={`badge-status ${statusClass}`}>
+                    {parque.statusOperacao || 'Aberto'}
+                  </span>
+                </div>
                 <CCardText>{parque.descricao}</CCardText>
                 <CCardText>Localização:{parque.localizacao}</CCardText>
                 <CCardText>Taxa de entrada: R$ {parque.taxa_entrada}</CCardText>

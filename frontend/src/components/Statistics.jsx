@@ -1,6 +1,7 @@
 import './Statistics.css'
 import { useState, useEffect } from 'react'
 import { Link } from 'react-router-dom'
+import { API_URL } from '../services/api'
 
 function Statistics(){
     const [totalParques, setTotalParques] = useState(0)
@@ -9,25 +10,25 @@ function Statistics(){
     const [totalNovidades, setTotalNovidades]= useState(0)
 
     useEffect(()=>{
-        fetch ('/api/parques/')
+        fetch (`${API_URL}/api/parques/`)
         .then(Response => Response.json())
         .then(data => {setTotalParques(data.length)})
         .catch(err =>console.error("Erro Parques", err));
     },[]);
     useEffect(()=>{
-        fetch ('/api/trilhas/')
+        fetch (`${API_URL}/api/trilhas/`)
         .then(Response => Response.json())
         .then(data => {setTotalTrilhas(data.length)})
         .catch(err =>console.error("Erro Trilhas", err));
     },[]);
     useEffect(()=>{
-        fetch ('/api/eventos/')
+        fetch (`${API_URL}/api/eventos/`)
         .then(Response => Response.json())
         .then(data => {setTotalEventos(data.length)})
         .catch(err =>console.error("Erro eventos", err));
     },[]);
     useEffect(()=>{
-        fetch ('/api/novidades/')
+        fetch (`${API_URL}/api/novidades/`)
         .then(Response => Response.json())
         .then(data => {setTotalNovidades(data.length)})
         .catch(err =>console.error("Erro novidades", err));

@@ -27,6 +27,11 @@ class HorarioFuncionamento(models.Model):
     def __str__(self):
         return f"{self.parque.nome} - {self.dia_semana}"
 
+class StatusOperacao(models.TextChoices):
+    ABERTO = 'aberto', 'Aberto'
+    FECHADO = 'fechado', 'Fechado'
+    TEMPORADA = 'temporada', 'Temporada'
+
 
 class Parque(models.Model):
     nome =models.CharField(max_length=120)
@@ -35,6 +40,11 @@ class Parque(models.Model):
     horario_funcionamento = models.CharField(max_length=100)
     taxa_entrada = models.DecimalField(max_digits=5, decimal_places=2, null=True, blank=True)
     imagem = models.URLField(max_length=500, blank=True, null=True)
+    statusOperacao = models.CharField(
+        max_length=20,
+        choices=StatusOperacao.choices,
+        default=StatusOperacao.ABERTO
+    )
     dias_funcionamento = ArrayField(
         models.CharField(max_length=20),
         default=list,
@@ -47,6 +57,7 @@ class Parque(models.Model):
         null=True, 
         help_text="Ex: Fechado para manutenção nas segundas-feiras de Janeiro."
     )
+
     def __str__(self):
         return self.nome
 
@@ -61,6 +72,11 @@ class Trilhas(models.Model):
     ativo = models.BooleanField(default=True)
     limite_entrada = models.TimeField(null=True, blank=True)
     limite_saida = models.TimeField(null=True, blank=True)
+    statusOperacao = models.CharField(
+        max_length=20,
+        choices=StatusOperacao.choices,
+        default=StatusOperacao.TEMPORADA
+    )
     class Meta:
         verbose_name="Trilha"
         verbose_name_plural="Trilhas"
@@ -72,9 +88,11 @@ class Trilhas(models.Model):
                 raise ValidationError(f"A entrada da trilha ({self.limite_entrada}) não pode abrir antes do parque ({h.horario_abertura}) na {h.get_dia_semana_display()}.")
             if self.limite_saida > h.horario_fechamento:
                 raise ValidationError(f"O limite de saída ({self.limite_saida}) não pode passar do fechamento do parque ({h.horario_fechamento}) na {h.get_dia_semana_display()}.")
+
     
     def __str__(self):
         return self.nome
+    
 
 class Eventos(models.Model):
     parque = models.ForeignKey(Parque, on_delete=models.CASCADE)

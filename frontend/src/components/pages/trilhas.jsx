@@ -5,11 +5,12 @@ import Footer from '../Footer';
 import Header from '../Header';
 import Hero from '../Hero';
 import Statistics from '../Statistics';
+import { API_URL } from '../../services/api';
 
 function Trilhas() {
   const [trilhas, setTrilhas] = useState([]);
   useEffect(() => {
-    fetch('/api/trilhas/')
+    fetch(`${API_URL}/api/trilhas/`)
       .then(response => response.json())
       .then(dados => {
         console.log(dados)
@@ -32,17 +33,24 @@ return (
         {trilhas.map(trilhas => {
           const imagemUrl = trilhas.imagem?.startsWith('http')
           ? trilhas.imagem :`/media/${trilhas.imagem}`
+          const statusClass = trilhas.statusOperacao ? trilhas.statusOperacao.toLowerCase() : 'Aberto';
 
           return (
             <CCard key={trilhas.id}>
               <CCardBody>
               <CCardTitle>{trilhas.nome}</CCardTitle>
+              <div>
+                    <span className={`badge-status ${statusClass}`}>
+                      {trilhas.statusOperacao || 'Aberto'}
+                    </span>
+              </div>
               <CCardImage 
                 orientation='top'
                 src={imagemUrl}
                 alt={trilhas.imagem}
                 ></CCardImage>
                 <CCardText>{trilhas.descricao}</CCardText>
+                <CCardText>Status:{trilhas.statusOperacao}</CCardText>  
                 <CCardText>Nível de dificuldade: {trilhas.dificuldade}</CCardText>
                 <CCardText>Tamanho do percurso: {trilhas.distancia} metros.</CCardText>
                 <CCardText>{trilhas.aviso_disponibilidade}</CCardText>                

@@ -5,11 +5,12 @@ import Footer from '../Footer';
 import Header from '../Header';
 import Hero from '../Hero';
 import Statistics from '../Statistics';
+import { API_URL } from '../../services/api';
 
 function Eventos() {
   const [eventos, setEventos] = useState([]);
   useEffect(() => {
-    fetch('/api/eventos/')
+    fetch(`${API_URL}/api/eventos/`)
       .then(response => response.json())
       .then(dados => {
         console.log(dados)

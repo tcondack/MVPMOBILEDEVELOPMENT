@@ -25,3 +25,4 @@ __init__.py
 # Sistema Operacional
 .DS_Store
 Thumbs.db
+frontend/src/services/api.js
