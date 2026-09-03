@@ -43,22 +43,3 @@
     }
 }
 
-.trails {
-    position: absolute;
-    right: 16px;
-    top: 50%;
-    transform: translateY(-50%);
-    color: #1ab35e; /* Verde da marca */
-    font-size: 18px;
-    pointer-events: none;
-}
-
-.forest {
-    position: absolute;
-    right: 16px;
-    top: 50%;
-    transform: translateY(-50%);
-    color: #1ab35e; /* Verde da marca */
-    font-size: 18px;
-    pointer-events: none;
-}
