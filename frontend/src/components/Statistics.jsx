@@ -3,6 +3,7 @@ import { useState, useEffect } from 'react'
 import { SiAlltrails } from "react-icons/si"
 import { Link } from 'react-router-dom'
 import { API_URL } from '../services/api'
+import { MdForest } from "react-icons/md"
 
 function Statistics(){
     const [totalParques, setTotalParques] = useState(0)
@@ -37,12 +38,12 @@ function Statistics(){
     return(
         <section className="Statistics">
             <div className="Statistics-item">
-                <span>🌲</span>
+                <MdForest className="forest"/>
                 <strong>{totalParques}</strong>
                 <Link to="/parques">Parques</Link>
             </div>
             <div className="Statistics-item">
-                <SiAlltrails />
+                <SiAlltrails className="trails"/>
                 <strong>{totalTrilhas}</strong>
                 <Link to="/trilhas">Trilhas</Link>
             </div>
