@@ -1,4 +1,4 @@
-# MVP DESENVOLVIMENTO BACKEND
+# MVP Mobile
 
 ## Índice
 - [Aluno](#aluno)

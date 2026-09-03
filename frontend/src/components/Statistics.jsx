@@ -1,7 +1,9 @@
 import './Statistics.css'
 import { useState, useEffect } from 'react'
+import { SiAlltrails } from "react-icons/si";
 import { Link } from 'react-router-dom'
 import { API_URL } from '../services/api'
+import { SiAlltrails } from "react-icons/si";
 
 function Statistics(){
     const [totalParques, setTotalParques] = useState(0)
@@ -41,7 +43,7 @@ function Statistics(){
                 <Link to="/parques">Parques</Link>
             </div>
             <div className="Statistics-item">
-                <span>△</span>
+                <SiAlltrails />
                 <strong>{totalTrilhas}</strong>
                 <Link to="/trilhas">Trilhas</Link>
             </div>
