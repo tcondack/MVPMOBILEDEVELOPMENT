@@ -61,12 +61,13 @@ section h2 {
 }
 .apresentacao-container {
     width: 100%;
-    max-width: 900px;
+    max-width: 100%;
     margin-left: auto;
     margin-right: auto;
     display: flex;
     flex-direction: column;
     align-items: center;
+    box-sizing: border-box;
     padding: 24px 16px;
     background-color: var(--areia-fundo) !important;
     position: relative;
@@ -77,13 +78,13 @@ section h2 {
     font-weight: bold;
     line-height: 1.15;
     margin: 0 0 15px 0;
-    margin-right: 10px;
     color: #1ab35e;
     text-align: center;
     width: 100%;
     max-width: 100%;
     word-break: normal; 
     overflow-wrap: break-word;
+    box-sizing: border-box;
 
 }
 
@@ -93,8 +94,9 @@ section h2 {
     line-height: 1.5;
     text-align: center;
     margin:0 0 35px 0;
-    max-width: 500px;
-    margin-right: 10px;
+    max-width: 100%;
+    padding: 0 10px;
+    box-sizing: border-box;
 
 }
 
